@@ -1,0 +1,65 @@
+{
+  "protocol": {
+    "A0_seed": 20260820,
+    "epochs": 250,
+    "K_eval": 32,
+    "threshold": "per-asset cal q95 frozen",
+    "alpha": 0.05,
+    "cluster_bootstrap": "source-window level, 2000 reps",
+    "e_value_seed_base": "950000+ai*10000+900"
+  },
+  "methods": {
+    "A0": {
+      "fpr": 0.17857142857142858,
+      "n_real": 28,
+      "auc": 0.46,
+      "auc_cluster_ci": [
+        0.067,
+        0.5
+      ],
+      "recall": 0.05555555555555555,
+      "recall_wilson": [
+        0.01,
+        0.258
+      ],
+      "n_forge": 18
+    },
+    "A5b": {
+      "fpr": 0.42857142857142855,
+      "n_real": 28,
+      "auc": 0.919,
+      "auc_cluster_ci": [
+        1.0,
+        1.0
+      ],
+      "recall": 0.9444444444444444,
+      "recall_wilson": [
+        0.742,
+        0.99
+      ],
+      "n_forge": 18
+    },
+    "LAonly": {
+      "fpr": 0.39285714285714285,
+      "n_real": 28,
+      "auc": 0.313,
+      "auc_cluster_ci": [
+        0.08,
+        0.538
+      ],
+      "recall": 0.3333333333333333,
+      "recall_wilson": [
+        0.163,
+        0.563
+      ],
+      "n_forge": 18
+    }
+  },
+  "e_rule": {
+    "real_certify": 0.03571428571428571,
+    "n7c_certify": 0.0,
+    "n7c_certified_count": 0,
+    "n_forge": 18
+  },
+  "elapsed_s": 1163.6
+}

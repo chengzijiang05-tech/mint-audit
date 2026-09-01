@@ -1,0 +1,222 @@
+{
+  "epochs": 250,
+  "n_test": 37,
+  "smoke": false,
+  "handcrafted_ceiling": {
+    "lev": 1.0,
+    "vol_excess": 1.0
+  },
+  "MINT": {
+    "s_auc_n2": 0.7801314828341855,
+    "s_auc_n5": 0.9948867786705624,
+    "e_auc_n2": 0.9401022644265887,
+    "e_auc_n5": 0.9919649379108838,
+    "s_real_mean": 0.292479544878006,
+    "s_n2_mean": -1.8903816938400269,
+    "s_n5_mean": -3.6452784538269043,
+    "spearman_s_lev": 0.2778167778167778,
+    "spearman_s_vol": 0.8018164668581516
+  },
+  "AUG": {
+    "s_auc_n2": 0.8962746530314097,
+    "s_auc_n5": 0.9642074506939372,
+    "e_auc_n2": 0.918918918918919,
+    "e_auc_n5": 0.9262235208181154,
+    "s_real_mean": 0.49051737785339355,
+    "s_n2_mean": 0.025858312845230103,
+    "s_n5_mean": -0.12884989380836487,
+    "spearman_s_lev": 0.5041769041769041,
+    "spearman_s_vol": 0.31033938098422903
+  },
+  "BASELINE_15d": {
+    "s_auc_n2": 0.5018261504747992,
+    "s_auc_n5": 0.9693206720233747
+  },
+  "verdict": {
+    "mint_n2_auc_gt_075": true,
+    "mint_n5_auc_gt_075": true,
+    "orbit_negatives_necessary": false,
+    "g1_pass": true
+  },
+  "elapsed_s": 274.8,
+  "train_hist_mint": [
+    {
+      "epoch": 0,
+      "loss": 7.9471,
+      "nce": 6.6649,
+      "bce": 1.2822,
+      "acc_pos": 0.0,
+      "acc_neg": 1.0
+    },
+    {
+      "epoch": 25,
+      "loss": 6.2374,
+      "nce": 4.9965,
+      "bce": 1.2409,
+      "acc_pos": 0.781,
+      "acc_neg": 0.829
+    },
+    {
+      "epoch": 50,
+      "loss": 3.1365,
+      "nce": 2.1083,
+      "bce": 1.0283,
+      "acc_pos": 0.953,
+      "acc_neg": 0.868
+    },
+    {
+      "epoch": 75,
+      "loss": 0.898,
+      "nce": 0.2811,
+      "bce": 0.6169,
+      "acc_pos": 0.953,
+      "acc_neg": 1.0
+    },
+    {
+      "epoch": 100,
+      "loss": 0.7363,
+      "nce": 0.2966,
+      "bce": 0.4397,
+      "acc_pos": 1.0,
+      "acc_neg": 0.883
+    },
+    {
+      "epoch": 125,
+      "loss": 0.1807,
+      "nce": 0.0037,
+      "bce": 0.177,
+      "acc_pos": 1.0,
+      "acc_neg": 1.0
+    },
+    {
+      "epoch": 150,
+      "loss": 0.1076,
+      "nce": 0.0007,
+      "bce": 0.1069,
+      "acc_pos": 1.0,
+      "acc_neg": 1.0
+    },
+    {
+      "epoch": 175,
+      "loss": 0.0911,
+      "nce": 0.0007,
+      "bce": 0.0904,
+      "acc_pos": 1.0,
+      "acc_neg": 1.0
+    },
+    {
+      "epoch": 200,
+      "loss": 0.0831,
+      "nce": 0.0017,
+      "bce": 0.0814,
+      "acc_pos": 1.0,
+      "acc_neg": 1.0
+    },
+    {
+      "epoch": 225,
+      "loss": 0.074,
+      "nce": 0.0008,
+      "bce": 0.0733,
+      "acc_pos": 1.0,
+      "acc_neg": 1.0
+    },
+    {
+      "epoch": 249,
+      "loss": 0.0775,
+      "nce": 0.0009,
+      "bce": 0.0766,
+      "acc_pos": 1.0,
+      "acc_neg": 1.0
+    }
+  ],
+  "train_hist_aug": [
+    {
+      "epoch": 0,
+      "loss": 7.9427,
+      "nce": 6.6601,
+      "bce": 1.2826,
+      "acc_pos": 0.0,
+      "acc_neg": 1.0
+    },
+    {
+      "epoch": 25,
+      "loss": 6.8777,
+      "nce": 5.6069,
+      "bce": 1.2708,
+      "acc_pos": 0.672,
+      "acc_neg": 0.444
+    },
+    {
+      "epoch": 50,
+      "loss": 6.1791,
+      "nce": 4.9257,
+      "bce": 1.2534,
+      "acc_pos": 0.812,
+      "acc_neg": 0.32
+    },
+    {
+      "epoch": 75,
+      "loss": 5.8108,
+      "nce": 4.5799,
+      "bce": 1.231,
+      "acc_pos": 0.766,
+      "acc_neg": 0.397
+    },
+    {
+      "epoch": 100,
+      "loss": 5.2772,
+      "nce": 4.0749,
+      "bce": 1.2024,
+      "acc_pos": 0.641,
+      "acc_neg": 0.507
+    },
+    {
+      "epoch": 125,
+      "loss": 5.305,
+      "nce": 4.1119,
+      "bce": 1.1932,
+      "acc_pos": 0.672,
+      "acc_neg": 0.438
+    },
+    {
+      "epoch": 150,
+      "loss": 5.1548,
+      "nce": 3.9808,
+      "bce": 1.174,
+      "acc_pos": 0.734,
+      "acc_neg": 0.428
+    },
+    {
+      "epoch": 175,
+      "loss": 5.1278,
+      "nce": 3.9644,
+      "bce": 1.1634,
+      "acc_pos": 0.75,
+      "acc_neg": 0.443
+    },
+    {
+      "epoch": 200,
+      "loss": 4.9958,
+      "nce": 3.8391,
+      "bce": 1.1567,
+      "acc_pos": 0.719,
+      "acc_neg": 0.454
+    },
+    {
+      "epoch": 225,
+      "loss": 5.0821,
+      "nce": 3.9234,
+      "bce": 1.1587,
+      "acc_pos": 0.859,
+      "acc_neg": 0.359
+    },
+    {
+      "epoch": 249,
+      "loss": 5.1236,
+      "nce": 3.9676,
+      "bce": 1.156,
+      "acc_pos": 0.781,
+      "acc_neg": 0.439
+    }
+  ]
+}

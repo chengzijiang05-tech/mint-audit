@@ -1,0 +1,593 @@
+{
+ "n": 1000,
+ "K": 32,
+ "n_trials": 150,
+ "seed": 20260828,
+ "h_stream": 115,
+ "eps_flag": 0.009,
+ "protocol": "candidate x=h(y); orbit=five-operator mixture; reader=deployed per-asset encoder s_theta",
+ "strong_cells": {
+  "ar1_strong|permute|equity": {
+   "e_cert_mean": 0.998348299165422,
+   "e_flag_mean": 1.0015163112036563,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|permute|bond": {
+   "e_cert_mean": 1.0007986608069288,
+   "e_flag_mean": 0.9991398275548916,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|permute|fx": {
+   "e_cert_mean": 1.0050944078729793,
+   "e_flag_mean": 0.9951986421825844,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|permute|gold": {
+   "e_cert_mean": 1.005993486980691,
+   "e_flag_mean": 0.9946689058974497,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|permute|copper": {
+   "e_cert_mean": 0.9932627336404232,
+   "e_flag_mean": 1.0063495463991556,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|time_reverse|equity": {
+   "e_cert_mean": 1.3583205895700734,
+   "e_flag_mean": 0.4806068811153273,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|time_reverse|bond": {
+   "e_cert_mean": 1.2991681358144693,
+   "e_flag_mean": 0.6642709626090451,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|time_reverse|fx": {
+   "e_cert_mean": 1.4864434706051333,
+   "e_flag_mean": 0.007479146973669864,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|time_reverse|gold": {
+   "e_cert_mean": 1.056066883917134,
+   "e_flag_mean": 0.9405998992704578,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|time_reverse|copper": {
+   "e_cert_mean": 1.2130146685132555,
+   "e_flag_mean": 0.7512603667103231,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|aaft|equity": {
+   "e_cert_mean": 1.4331844983019115,
+   "e_flag_mean": 0.5144164503796227,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|aaft|bond": {
+   "e_cert_mean": 1.3184091133769231,
+   "e_flag_mean": 0.6626342166617463,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|aaft|fx": {
+   "e_cert_mean": 1.428090480877152,
+   "e_flag_mean": 0.008896907604420214,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|aaft|gold": {
+   "e_cert_mean": 1.0569955472985548,
+   "e_flag_mean": 0.9395337677782934,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|aaft|copper": {
+   "e_cert_mean": 1.1941458615043496,
+   "e_flag_mean": 0.7764292412084137,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|iaaft|equity": {
+   "e_cert_mean": 1.3489931101050876,
+   "e_flag_mean": 0.47536332081634064,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|iaaft|bond": {
+   "e_cert_mean": 1.6773797958948238,
+   "e_flag_mean": 0.6438045867076075,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|iaaft|fx": {
+   "e_cert_mean": 1.4968726263926941,
+   "e_flag_mean": 0.006263724750023249,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|iaaft|gold": {
+   "e_cert_mean": 1.0454966800917094,
+   "e_flag_mean": 0.9507686259365579,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|iaaft|copper": {
+   "e_cert_mean": 1.2381609307094812,
+   "e_flag_mean": 0.7487222366161564,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|block_perm|equity": {
+   "e_cert_mean": 1.2522351350898193,
+   "e_flag_mean": 0.7260475952683555,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|block_perm|bond": {
+   "e_cert_mean": 1.1049038495608554,
+   "e_flag_mean": 0.8391589975093986,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|block_perm|fx": {
+   "e_cert_mean": 1.4481919846080968,
+   "e_flag_mean": 0.07759357506816902,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|block_perm|gold": {
+   "e_cert_mean": 1.0347942274670323,
+   "e_flag_mean": 0.9624752673448579,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1_strong|block_perm|copper": {
+   "e_cert_mean": 1.1156935378321204,
+   "e_flag_mean": 0.8636547917494343,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|permute|equity": {
+   "e_cert_mean": 1.0020243540951927,
+   "e_flag_mean": 0.9979948151052425,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|permute|bond": {
+   "e_cert_mean": 1.0004185357597728,
+   "e_flag_mean": 0.9997244165998442,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|permute|fx": {
+   "e_cert_mean": 1.0019983690630574,
+   "e_flag_mean": 0.9978850194021524,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|permute|gold": {
+   "e_cert_mean": 0.9959101651355892,
+   "e_flag_mean": 1.0035542868174467,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|permute|copper": {
+   "e_cert_mean": 1.0030814816594131,
+   "e_flag_mean": 0.9966836669442736,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|time_reverse|equity": {
+   "e_cert_mean": 1.0407301134231095,
+   "e_flag_mean": 0.9591735402109176,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|time_reverse|bond": {
+   "e_cert_mean": 1.0150383110530925,
+   "e_flag_mean": 0.9843823308435404,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|time_reverse|fx": {
+   "e_cert_mean": 1.048717385978023,
+   "e_flag_mean": 0.9641042909561507,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|time_reverse|gold": {
+   "e_cert_mean": 1.0065968538467218,
+   "e_flag_mean": 0.9935012497784286,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|time_reverse|copper": {
+   "e_cert_mean": 0.9991251583151535,
+   "e_flag_mean": 1.0013265202352302,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|aaft|equity": {
+   "e_cert_mean": 1.0354265770118776,
+   "e_flag_mean": 0.9633911879382379,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|aaft|bond": {
+   "e_cert_mean": 1.0188807447664165,
+   "e_flag_mean": 0.980847663380273,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|aaft|fx": {
+   "e_cert_mean": 1.0570141481320736,
+   "e_flag_mean": 0.9523035955934567,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|aaft|gold": {
+   "e_cert_mean": 0.99975515052538,
+   "e_flag_mean": 0.9998540263513629,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|aaft|copper": {
+   "e_cert_mean": 1.0047817780682675,
+   "e_flag_mean": 0.9953248518923434,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|iaaft|equity": {
+   "e_cert_mean": 1.037108903723251,
+   "e_flag_mean": 0.9617976429422956,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|iaaft|bond": {
+   "e_cert_mean": 1.0162146129988727,
+   "e_flag_mean": 0.9833878667025275,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|iaaft|fx": {
+   "e_cert_mean": 1.0538790530612383,
+   "e_flag_mean": 0.95788361587398,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|iaaft|gold": {
+   "e_cert_mean": 0.9975710081123133,
+   "e_flag_mean": 1.001800286734218,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|iaaft|copper": {
+   "e_cert_mean": 1.0018910825557015,
+   "e_flag_mean": 0.99900653516091,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|block_perm|equity": {
+   "e_cert_mean": 1.0227033311967004,
+   "e_flag_mean": 0.9762576025344507,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|block_perm|bond": {
+   "e_cert_mean": 1.0072640412520242,
+   "e_flag_mean": 0.9924249509112337,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|block_perm|fx": {
+   "e_cert_mean": 1.0076103083153156,
+   "e_flag_mean": 0.99236768692454,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|block_perm|gold": {
+   "e_cert_mean": 0.9968730970937918,
+   "e_flag_mean": 1.0026775576080993,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "arfima|block_perm|copper": {
+   "e_cert_mean": 1.0098048035387281,
+   "e_flag_mean": 0.9917666790654531,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  }
+ },
+ "sliding_stream": {
+  "iid|equity": {
+   "mean_W_cert": 1.0083702004302537,
+   "mean_W_flag": 0.9922555339391007,
+   "max_M_flag_corrected": 1.007027041238109,
+   "max_M_cert_corrected": 2.640662875360221,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 1.0011845214457566,
+   "cond_flag_given_prev_lo": 0.982908392911916
+  },
+  "iid|bond": {
+   "mean_W_cert": 0.9957009183081282,
+   "mean_W_flag": 1.0043743137748466,
+   "max_M_flag_corrected": 1.0551278534206592,
+   "max_M_cert_corrected": 0.983449094652592,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 1.0038878421288198,
+   "cond_flag_given_prev_lo": 1.004812341925802
+  },
+  "iid|fx": {
+   "mean_W_cert": 0.9952076719773352,
+   "mean_W_flag": 1.0044958846218657,
+   "max_M_flag_corrected": 1.047659895376092,
+   "max_M_cert_corrected": 0.9896712881084316,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 1.0023024756911187,
+   "cond_flag_given_prev_lo": 1.0064252031601149
+  },
+  "iid|gold": {
+   "mean_W_cert": 1.006446882982904,
+   "mean_W_flag": 0.9936060131437389,
+   "max_M_flag_corrected": 0.9877098166308301,
+   "max_M_cert_corrected": 1.388816989169481,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 0.9966026547169496,
+   "cond_flag_given_prev_lo": 0.9905656994920787
+  },
+  "iid|copper": {
+   "mean_W_cert": 1.0236771470714872,
+   "mean_W_flag": 0.9784342463685628,
+   "max_M_flag_corrected": 1.0840680386608148,
+   "max_M_cert_corrected": 6.09355263139446,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 0.976600085701448,
+   "cond_flag_given_prev_lo": 0.9786345444074724
+  },
+  "ar1|equity": {
+   "mean_W_cert": 0.9956618146081878,
+   "mean_W_flag": 1.0039308930071003,
+   "max_M_flag_corrected": 0.9758077223564179,
+   "max_M_cert_corrected": 1.0239246377981153,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 1.0051500878681026,
+   "cond_flag_given_prev_lo": 1.0033541578881127
+  },
+  "ar1|bond": {
+   "mean_W_cert": 1.0086011902169676,
+   "mean_W_flag": 0.9915489591402411,
+   "max_M_flag_corrected": 0.9379579014240841,
+   "max_M_cert_corrected": 1.5159962143454047,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 0.9875193070254048,
+   "cond_flag_given_prev_lo": 0.9963707066340833
+  },
+  "ar1|fx": {
+   "mean_W_cert": 1.0033827313870756,
+   "mean_W_flag": 0.9964945790885884,
+   "max_M_flag_corrected": 0.8865643482527775,
+   "max_M_cert_corrected": 1.6251084227966792,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 0.9910359214150583,
+   "cond_flag_given_prev_lo": 1.0037576006417244
+  },
+  "ar1|gold": {
+   "mean_W_cert": 1.0063963134286071,
+   "mean_W_flag": 0.9941298288612167,
+   "max_M_flag_corrected": 1.0165240582068467,
+   "max_M_cert_corrected": 2.0574290571631395,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 1.0030032891466605,
+   "cond_flag_given_prev_lo": 0.9847029835605189
+  },
+  "ar1|copper": {
+   "mean_W_cert": 0.9992721578068492,
+   "mean_W_flag": 0.999677051385436,
+   "max_M_flag_corrected": 0.8244561157627426,
+   "max_M_cert_corrected": 1.9788748323603698,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 1.0020591582293406,
+   "cond_flag_given_prev_lo": 1.000238818762248
+  },
+  "ar1_strong|equity": {
+   "mean_W_cert": 1.370957405993811,
+   "mean_W_flag": 0.47108919015852535,
+   "max_M_flag_corrected": 0.11572227780065972,
+   "max_M_cert_corrected": 1674961162.7275581,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 0.5521572710315029,
+   "cond_flag_given_prev_lo": 0.3962373445812963
+  },
+  "ar1_strong|bond": {
+   "mean_W_cert": 1.1291165021147245,
+   "mean_W_flag": 0.7036353680810269,
+   "max_M_flag_corrected": 0.0867204513065614,
+   "max_M_cert_corrected": 6640.392826271935,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 0.8336718046523343,
+   "cond_flag_given_prev_lo": 0.584408307522223
+  },
+  "ar1_strong|fx": {
+   "mean_W_cert": 1.474688533267498,
+   "mean_W_flag": 0.007139081526121017,
+   "max_M_flag_corrected": 0.0038021822531166044,
+   "max_M_cert_corrected": 1.0816610987864275e+17,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 0.008280458424209826,
+   "cond_flag_given_prev_lo": 0.006055646375974778
+  },
+  "ar1_strong|gold": {
+   "mean_W_cert": 1.0396938174611214,
+   "mean_W_flag": 0.9552119813180234,
+   "max_M_flag_corrected": 0.812435780398479,
+   "max_M_cert_corrected": 28.016229019149034,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 0.9607120282783942,
+   "cond_flag_given_prev_lo": 0.952088500654073
+  },
+  "ar1_strong|copper": {
+   "mean_W_cert": 0.9910722992441195,
+   "mean_W_flag": 0.8547383457479016,
+   "max_M_flag_corrected": 0.41935945622666815,
+   "max_M_cert_corrected": 1.613402073052572,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 0.9016135536351653,
+   "cond_flag_given_prev_lo": 0.8154351493416061
+  },
+  "arfima|equity": {
+   "mean_W_cert": 1.0326872074128943,
+   "mean_W_flag": 0.9649182297827605,
+   "max_M_flag_corrected": 0.9397773428540754,
+   "max_M_cert_corrected": 12.970955857902215,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 0.971349800846563,
+   "cond_flag_given_prev_lo": 0.9587793410144494
+  },
+  "arfima|bond": {
+   "mean_W_cert": 1.02356674517801,
+   "mean_W_flag": 0.9771914835120619,
+   "max_M_flag_corrected": 1.0256062406920174,
+   "max_M_cert_corrected": 5.973786595674982,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 0.9889031565508352,
+   "cond_flag_given_prev_lo": 0.9652530592044419
+  },
+  "arfima|fx": {
+   "mean_W_cert": 1.0169976840752133,
+   "mean_W_flag": 0.9824749797264836,
+   "max_M_flag_corrected": 1.303331899017511,
+   "max_M_cert_corrected": 2.4650616141493837,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 1.0002629194900807,
+   "cond_flag_given_prev_lo": 0.9641520754098418
+  },
+  "arfima|gold": {
+   "mean_W_cert": 0.9963454470083855,
+   "mean_W_flag": 1.0031117383166388,
+   "max_M_flag_corrected": 1.0118528214690858,
+   "max_M_cert_corrected": 1.0667575468687744,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 1.0056480248082669,
+   "cond_flag_given_prev_lo": 1.000262333254034
+  },
+  "arfima|copper": {
+   "mean_W_cert": 0.999951424733548,
+   "mean_W_flag": 1.0007259585602502,
+   "max_M_flag_corrected": 1.1943367504833466,
+   "max_M_cert_corrected": 1.028707291614819,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 0.9964706345753911,
+   "cond_flag_given_prev_lo": 1.005253915992133
+  },
+  "gjr|equity": {
+   "mean_W_cert": 3.990646405770217,
+   "mean_W_flag": 0.23786557546249326,
+   "max_M_flag_corrected": 0.03995251221125732,
+   "max_M_cert_corrected": 1.5891662176231257e+41,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.02608695652173913,
+   "cond_flag_given_prev_hi": 0.42946023954193296,
+   "cond_flag_given_prev_lo": 0.04973676209605939
+  },
+  "gjr|bond": {
+   "mean_W_cert": 6.789197928349014,
+   "mean_W_flag": 0.34482103670465386,
+   "max_M_flag_corrected": 0.020675717781967282,
+   "max_M_cert_corrected": 9.21836165635985e+66,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.10434782608695652,
+   "cond_flag_given_prev_hi": 0.5476349574414727,
+   "cond_flag_given_prev_lo": 0.14769061136191636
+  },
+  "gjr|fx": {
+   "mean_W_cert": 7.671128761986095,
+   "mean_W_flag": 0.3856463870075845,
+   "max_M_flag_corrected": 0.006197422398498355,
+   "max_M_cert_corrected": 3.757834459196937e+66,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.17391304347826086,
+   "cond_flag_given_prev_hi": 0.6198352137055505,
+   "cond_flag_given_prev_lo": 0.15811358114834664
+  },
+  "gjr|gold": {
+   "mean_W_cert": 2.900208605494862,
+   "mean_W_flag": 0.3345022366288039,
+   "max_M_flag_corrected": 0.7151187663443072,
+   "max_M_cert_corrected": 1.0333666140270607e+18,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.0,
+   "cond_flag_given_prev_hi": 0.5285669875617333,
+   "cond_flag_given_prev_lo": 0.13364708922898683
+  },
+  "gjr|copper": {
+   "mean_W_cert": 2.9455315027693696,
+   "mean_W_flag": 0.3773994843421412,
+   "max_M_flag_corrected": 0.22730565255631088,
+   "max_M_cert_corrected": 4.981588478416933e+35,
+   "p_flag_ge_20": 0.0,
+   "p_cert_ge_20": 0.008695652173913044,
+   "cond_flag_given_prev_hi": 0.5416232201449156,
+   "cond_flag_given_prev_lo": 0.2157730832922235
+  }
+ },
+ "summary": {
+  "strong_cert_worst_cell": {
+   "eps": 0.6774,
+   "cell": "ar1_strong|iaaft|bond"
+  },
+  "strong_flag_worst_cell": {
+   "eps": 0.0063,
+   "cell": "ar1_strong|permute|copper"
+  },
+  "strong_per_family": {
+   "ar1_strong": {
+    "max_E_cert": 1.6774,
+    "max_E_flag": 1.0063,
+    "p_cert_ge_20_max": 0.0,
+    "p_flag_ge_20_max": 0.0
+   },
+   "arfima": {
+    "max_E_cert": 1.057,
+    "max_E_flag": 1.0036,
+    "p_cert_ge_20_max": 0.0,
+    "p_flag_ge_20_max": 0.0
+   }
+  },
+  "stream_flag_mean_max": 1.0045,
+  "stream_flag_cond_given_prev_hi_max": 1.0056,
+  "stream_M_flag_corrected_max": 1.3033,
+  "tau": 115,
+  "note": "strong_cert eps is max positive deviation of E[W_cert] from 1 over the two strong-dependence families (5 operators x 5 encoders x N_TRIALS); stream quantities are over the 95%-overlap sliding stream with fresh orbits per window"
+ },
+ "elapsed_s": 735.6
+}

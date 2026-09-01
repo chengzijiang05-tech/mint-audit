@@ -1,0 +1,302 @@
+{
+  "protocol": {
+    "mechanism": "textualize->iterative autoregressive re-prompting->parse (SDForger sliding-window mechanism, raw numeric template, numeric-constrained decoding)",
+    "forge_len": 1000,
+    "prefix_len": 100,
+    "seg_new": 100,
+    "seg_tokens": 400,
+    "max_segs": 40,
+    "recontext": 60,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "temp_escape": "+0.25 per stall/discard (cap 1.4, reset on clean segment)",
+    "segment_gates": {
+      "stall": ">=20 identical consecutive values -> run cut back",
+      "diversity": "uniq ratio < 0.2 (min 10) -> segment dropped",
+      "outlier": "|v| > 8.0x context max -> segment dropped"
+    },
+    "acceptance": "len>=1000 AND uniq_ratio>=0.3",
+    "early_stop": "generation halts when 6 identical values appear in decoded tail",
+    "retries_per_gap": 3,
+    "per_model_target": 5,
+    "seed": 20260821,
+    "scale_align": "asset test-layer mean std",
+    "models": {
+      "qwen2.5-0.5b-instruct": "Qwen/Qwen2.5-0.5B-Instruct"
+    }
+  },
+  "n_attempts": 15,
+  "n_series_saved": 15,
+  "log": [
+    {
+      "asset": "gold",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1035,
+      "segs": 26,
+      "uniq_ratio": 0.186,
+      "discards": {
+        "empty": 0,
+        "div": 3,
+        "outlier": 0
+      },
+      "gen_tokens": 9400,
+      "gen_s": 1994.1,
+      "gen_seed": 20341599,
+      "attempt": 0,
+      "prompt_ctx_window": 1
+    },
+    {
+      "asset": "gold",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1035,
+      "segs": 23,
+      "uniq_ratio": 0.259,
+      "discards": {
+        "empty": 0,
+        "div": 0,
+        "outlier": 0
+      },
+      "gen_tokens": 9200,
+      "gen_s": 1925.7,
+      "gen_seed": 20419376,
+      "attempt": 1,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "gold",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1035,
+      "segs": 23,
+      "uniq_ratio": 0.179,
+      "discards": {
+        "empty": 0,
+        "div": 0,
+        "outlier": 0
+      },
+      "gen_tokens": 9200,
+      "gen_s": 1752.3,
+      "gen_seed": 20497153,
+      "attempt": 2,
+      "prompt_ctx_window": 3
+    },
+    {
+      "asset": "gold",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1035,
+      "segs": 24,
+      "uniq_ratio": 0.778,
+      "discards": {
+        "empty": 0,
+        "div": 1,
+        "outlier": 0
+      },
+      "gen_tokens": 9400,
+      "gen_s": 1708.7,
+      "gen_seed": 20341600,
+      "attempt": 0,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "gold",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1035,
+      "segs": 25,
+      "uniq_ratio": 0.551,
+      "discards": {
+        "empty": 0,
+        "div": 2,
+        "outlier": 0
+      },
+      "gen_tokens": 10000,
+      "gen_s": 2091.7,
+      "gen_seed": 20341601,
+      "attempt": 0,
+      "prompt_ctx_window": 3
+    },
+    {
+      "asset": "gold",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 574,
+      "segs": 31,
+      "uniq_ratio": 0.791,
+      "discards": {
+        "empty": 0,
+        "div": 7,
+        "outlier": 11
+      },
+      "gen_tokens": 9820,
+      "gen_s": 2045.7,
+      "gen_seed": 20341602,
+      "attempt": 0,
+      "prompt_ctx_window": 4
+    },
+    {
+      "asset": "gold",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1030,
+      "segs": 28,
+      "uniq_ratio": 0.148,
+      "discards": {
+        "empty": 0,
+        "div": 5,
+        "outlier": 0
+      },
+      "gen_tokens": 10740,
+      "gen_s": 2689.9,
+      "gen_seed": 20419379,
+      "attempt": 1,
+      "prompt_ctx_window": 5
+    },
+    {
+      "asset": "gold",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1035,
+      "segs": 25,
+      "uniq_ratio": 0.173,
+      "discards": {
+        "empty": 0,
+        "div": 2,
+        "outlier": 0
+      },
+      "gen_tokens": 9360,
+      "gen_s": 2765.9,
+      "gen_seed": 20497156,
+      "attempt": 2,
+      "prompt_ctx_window": 6
+    },
+    {
+      "asset": "bond",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1035,
+      "segs": 25,
+      "uniq_ratio": 0.167,
+      "discards": {
+        "empty": 0,
+        "div": 2,
+        "outlier": 0
+      },
+      "gen_tokens": 9640,
+      "gen_s": 1159.2,
+      "gen_seed": 35894999,
+      "attempt": 0,
+      "prompt_ctx_window": 1
+    },
+    {
+      "asset": "bond",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 81,
+      "segs": 8,
+      "uniq_ratio": 0.84,
+      "discards": {
+        "empty": 0,
+        "div": 5,
+        "outlier": 1
+      },
+      "gen_tokens": 1340,
+      "gen_s": 179.0,
+      "gen_seed": 35972776,
+      "attempt": 1,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "bond",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 585,
+      "segs": 19,
+      "uniq_ratio": 0.689,
+      "discards": {
+        "empty": 0,
+        "div": 4,
+        "outlier": 2
+      },
+      "gen_tokens": 6080,
+      "gen_s": 791.1,
+      "gen_seed": 36050553,
+      "attempt": 2,
+      "prompt_ctx_window": 3
+    },
+    {
+      "asset": "gold",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1035,
+      "segs": 25,
+      "uniq_ratio": 0.301,
+      "discards": {
+        "empty": 0,
+        "div": 2,
+        "outlier": 0
+      },
+      "gen_tokens": 10000,
+      "gen_s": 1291.5,
+      "gen_seed": 35897004,
+      "attempt": 0,
+      "prompt_ctx_window": 1
+    },
+    {
+      "asset": "gold",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 893,
+      "segs": 30,
+      "uniq_ratio": 0.637,
+      "discards": {
+        "empty": 0,
+        "div": 9,
+        "outlier": 1
+      },
+      "gen_tokens": 8520,
+      "gen_s": 1109.9,
+      "gen_seed": 35897007,
+      "attempt": 0,
+      "prompt_ctx_window": 4
+    },
+    {
+      "asset": "gold",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 740,
+      "segs": 23,
+      "uniq_ratio": 0.501,
+      "discards": {
+        "empty": 0,
+        "div": 5,
+        "outlier": 1
+      },
+      "gen_tokens": 7160,
+      "gen_s": 930.5,
+      "gen_seed": 35974784,
+      "attempt": 1,
+      "prompt_ctx_window": 5
+    },
+    {
+      "asset": "gold",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1017,
+      "segs": 29,
+      "uniq_ratio": 0.493,
+      "discards": {
+        "empty": 0,
+        "div": 5,
+        "outlier": 0
+      },
+      "gen_tokens": 9460,
+      "gen_s": 1226.4,
+      "gen_seed": 36052561,
+      "attempt": 2,
+      "prompt_ctx_window": 6
+    }
+  ]
+}

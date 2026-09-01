@@ -1,0 +1,47 @@
+{
+  "protocol": {
+    "stats": [
+      "L",
+      "Ldir",
+      "CCK",
+      "bispec"
+    ],
+    "surrogates": "IAAFT B=99",
+    "seed": 20260821,
+    "family_index": 8,
+    "real_p_from": "e9_gen2_surrogate.json",
+    "n_forge": 18,
+    "n_real": 28
+  },
+  "summary": {
+    "L": {
+      "auc": 0.732,
+      "recall@p>=0.05": 0.444,
+      "fpr@p>=0.05": 0.143,
+      "n_forge": 18,
+      "n_real": 28
+    },
+    "Ldir": {
+      "auc": 0.532,
+      "recall@p>=0.05": 0.556,
+      "fpr@p>=0.05": 0.536,
+      "n_forge": 18,
+      "n_real": 28
+    },
+    "CCK": {
+      "auc": 0.71,
+      "recall@p>=0.05": 0.444,
+      "fpr@p>=0.05": 0.179,
+      "n_forge": 18,
+      "n_real": 28
+    },
+    "bispec": {
+      "auc": 0.607,
+      "recall@p>=0.05": 0.667,
+      "fpr@p>=0.05": 0.571,
+      "n_forge": 18,
+      "n_real": 28
+    }
+  },
+  "elapsed_s": 68.0
+}

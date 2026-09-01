@@ -1,0 +1,223 @@
+{
+  "epochs": 250,
+  "n_test": 37,
+  "smoke": false,
+  "handcrafted_ceiling": {
+    "lev": 1.0,
+    "vol_excess": 1.0
+  },
+  "MINT": {
+    "s_auc_n2": 0.789627465303141,
+    "s_auc_n5": 1.0,
+    "e_auc_n2": 0.9539810080350621,
+    "e_auc_n5": 1.0,
+    "s_real_mean": -0.4718593955039978,
+    "s_n2_mean": -2.488595724105835,
+    "s_n5_mean": -3.9608969688415527,
+    "spearman_s_lev": 0.2663302913302913,
+    "spearman_s_vol": 0.8262685652340421
+  },
+  "AUG": {
+    "s_auc_n2": 0.34842951059167276,
+    "s_auc_n5": 0.960555149744339,
+    "e_auc_n2": 0.2943754565376187,
+    "e_auc_n5": 0.8663257852447042,
+    "s_real_mean": 0.3124155104160309,
+    "s_n2_mean": 0.3574071228504181,
+    "s_n5_mean": 0.09085384756326675,
+    "spearman_s_lev": -0.11667251667251666,
+    "spearman_s_vol": 0.6445780226635012
+  },
+  "BASELINE_15d": {
+    "s_auc_n2": 0.5018261504747992,
+    "s_auc_n5": 0.9693206720233747
+  },
+  "verdict": {
+    "mint_n2_auc_gt_075": true,
+    "mint_n5_auc_gt_075": true,
+    "orbit_negatives_necessary": true,
+    "g1_pass": true
+  },
+  "elapsed_s": 272.6,
+  "train_hist_mint": [
+    {
+      "epoch": 0,
+      "loss": 7.9181,
+      "nce": 6.6375,
+      "bce": 1.2805,
+      "acc_pos": 0.0,
+      "acc_neg": 1.0
+    },
+    {
+      "epoch": 25,
+      "loss": 7.6454,
+      "nce": 6.3657,
+      "bce": 1.2797,
+      "acc_pos": 0.0,
+      "acc_neg": 1.0
+    },
+    {
+      "epoch": 50,
+      "loss": 3.6049,
+      "nce": 2.5496,
+      "bce": 1.0553,
+      "acc_pos": 0.688,
+      "acc_neg": 0.93
+    },
+    {
+      "epoch": 75,
+      "loss": 1.6482,
+      "nce": 0.9206,
+      "bce": 0.7276,
+      "acc_pos": 0.891,
+      "acc_neg": 0.936
+    },
+    {
+      "epoch": 100,
+      "loss": 0.3523,
+      "nce": 0.0328,
+      "bce": 0.3195,
+      "acc_pos": 1.0,
+      "acc_neg": 0.996
+    },
+    {
+      "epoch": 125,
+      "loss": 0.1653,
+      "nce": 0.0028,
+      "bce": 0.1625,
+      "acc_pos": 1.0,
+      "acc_neg": 0.999
+    },
+    {
+      "epoch": 150,
+      "loss": 0.1054,
+      "nce": 0.0012,
+      "bce": 0.1042,
+      "acc_pos": 1.0,
+      "acc_neg": 1.0
+    },
+    {
+      "epoch": 175,
+      "loss": 0.0876,
+      "nce": 0.0011,
+      "bce": 0.0864,
+      "acc_pos": 1.0,
+      "acc_neg": 0.999
+    },
+    {
+      "epoch": 200,
+      "loss": 0.0772,
+      "nce": 0.0009,
+      "bce": 0.0763,
+      "acc_pos": 1.0,
+      "acc_neg": 1.0
+    },
+    {
+      "epoch": 225,
+      "loss": 0.0725,
+      "nce": 0.0008,
+      "bce": 0.0717,
+      "acc_pos": 1.0,
+      "acc_neg": 1.0
+    },
+    {
+      "epoch": 249,
+      "loss": 0.0784,
+      "nce": 0.0012,
+      "bce": 0.0772,
+      "acc_pos": 1.0,
+      "acc_neg": 1.0
+    }
+  ],
+  "train_hist_aug": [
+    {
+      "epoch": 0,
+      "loss": 7.9749,
+      "nce": 6.689,
+      "bce": 1.2859,
+      "acc_pos": 0.0,
+      "acc_neg": 1.0
+    },
+    {
+      "epoch": 25,
+      "loss": 7.9253,
+      "nce": 6.6453,
+      "bce": 1.2799,
+      "acc_pos": 1.0,
+      "acc_neg": 0.0
+    },
+    {
+      "epoch": 50,
+      "loss": 7.9243,
+      "nce": 6.6446,
+      "bce": 1.2797,
+      "acc_pos": 0.0,
+      "acc_neg": 1.0
+    },
+    {
+      "epoch": 75,
+      "loss": 7.9241,
+      "nce": 6.6445,
+      "bce": 1.2796,
+      "acc_pos": 1.0,
+      "acc_neg": 0.007
+    },
+    {
+      "epoch": 100,
+      "loss": 7.8821,
+      "nce": 6.6027,
+      "bce": 1.2794,
+      "acc_pos": 1.0,
+      "acc_neg": 0.07
+    },
+    {
+      "epoch": 125,
+      "loss": 6.3943,
+      "nce": 5.1242,
+      "bce": 1.2701,
+      "acc_pos": 0.469,
+      "acc_neg": 0.592
+    },
+    {
+      "epoch": 150,
+      "loss": 5.8493,
+      "nce": 4.5928,
+      "bce": 1.2565,
+      "acc_pos": 0.75,
+      "acc_neg": 0.388
+    },
+    {
+      "epoch": 175,
+      "loss": 5.5935,
+      "nce": 4.3579,
+      "bce": 1.2356,
+      "acc_pos": 0.734,
+      "acc_neg": 0.469
+    },
+    {
+      "epoch": 200,
+      "loss": 5.3524,
+      "nce": 4.1144,
+      "bce": 1.238,
+      "acc_pos": 0.656,
+      "acc_neg": 0.47
+    },
+    {
+      "epoch": 225,
+      "loss": 5.437,
+      "nce": 4.2073,
+      "bce": 1.2297,
+      "acc_pos": 0.641,
+      "acc_neg": 0.512
+    },
+    {
+      "epoch": 249,
+      "loss": 5.3982,
+      "nce": 4.172,
+      "bce": 1.2262,
+      "acc_pos": 0.734,
+      "acc_neg": 0.467
+    }
+  ],
+  "seed": 20260821
+}

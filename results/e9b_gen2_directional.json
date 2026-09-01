@@ -1,0 +1,176 @@
+{
+  "protocol": {
+    "reading": "statistic value (not p); direction per statistic semantics: anom = -T throughout",
+    "rationale": "two-sided p reading cannot see arrow reversal (E9 finding); directional reading is Gen2's correct weapon for N2",
+    "threshold": "per-asset cal q95 on -T"
+  },
+  "L-dir": {
+    "N1数值置换": {
+      "auc": 0.496,
+      "recall": 0.393,
+      "fpr": 0.393
+    },
+    "N2时间倒置": {
+      "auc": 0.453,
+      "recall": 0.357,
+      "fpr": 0.393
+    },
+    "N3标度破坏": {
+      "auc": 0.318,
+      "recall": 0.179,
+      "fpr": 0.393
+    },
+    "N4跨域嫁接": {
+      "auc": 0.473,
+      "recall": 0.393,
+      "fpr": 0.393
+    },
+    "N5相位伪造": {
+      "auc": 0.556,
+      "recall": 0.393,
+      "fpr": 0.393
+    },
+    "N7a": {
+      "auc": 0.536,
+      "recall": 0.36,
+      "fpr": 0.393
+    },
+    "N7b": {
+      "auc": 0.502,
+      "recall": 0.4,
+      "fpr": 0.393
+    },
+    "N8": {
+      "auc": 0.394,
+      "recall": 0.338,
+      "fpr": 0.393
+    }
+  },
+  "L-abs": {
+    "N1数值置换": {
+      "auc": 0.514,
+      "recall": 0.857,
+      "fpr": 0.786
+    },
+    "N2时间倒置": {
+      "auc": 0.499,
+      "recall": 0.786,
+      "fpr": 0.786
+    },
+    "N3标度破坏": {
+      "auc": 0.265,
+      "recall": 0.464,
+      "fpr": 0.786
+    },
+    "N4跨域嫁接": {
+      "auc": 0.509,
+      "recall": 0.786,
+      "fpr": 0.786
+    },
+    "N5相位伪造": {
+      "auc": 0.768,
+      "recall": 0.964,
+      "fpr": 0.786
+    },
+    "N7a": {
+      "auc": 0.522,
+      "recall": 0.8,
+      "fpr": 0.786
+    },
+    "N7b": {
+      "auc": 0.846,
+      "recall": 1.0,
+      "fpr": 0.786
+    },
+    "N8": {
+      "auc": 0.562,
+      "recall": 0.838,
+      "fpr": 0.786
+    }
+  },
+  "CCK": {
+    "N1数值置换": {
+      "auc": 0.489,
+      "recall": 0.393,
+      "fpr": 0.393
+    },
+    "N2时间倒置": {
+      "auc": 0.499,
+      "recall": 0.393,
+      "fpr": 0.393
+    },
+    "N3标度破坏": {
+      "auc": 0.519,
+      "recall": 0.5,
+      "fpr": 0.393
+    },
+    "N4跨域嫁接": {
+      "auc": 0.694,
+      "recall": 0.893,
+      "fpr": 0.393
+    },
+    "N5相位伪造": {
+      "auc": 0.629,
+      "recall": 0.643,
+      "fpr": 0.393
+    },
+    "N7a": {
+      "auc": 0.685,
+      "recall": 0.7,
+      "fpr": 0.393
+    },
+    "N7b": {
+      "auc": 0.825,
+      "recall": 1.0,
+      "fpr": 0.393
+    },
+    "N8": {
+      "auc": 0.744,
+      "recall": 0.875,
+      "fpr": 0.393
+    }
+  },
+  "bispec": {
+    "N1数值置换": {
+      "auc": 0.503,
+      "recall": 0.321,
+      "fpr": 0.321
+    },
+    "N2时间倒置": {
+      "auc": 0.503,
+      "recall": 0.321,
+      "fpr": 0.321
+    },
+    "N3标度破坏": {
+      "auc": 0.18,
+      "recall": 0.0,
+      "fpr": 0.321
+    },
+    "N4跨域嫁接": {
+      "auc": 0.324,
+      "recall": 0.0,
+      "fpr": 0.321
+    },
+    "N5相位伪造": {
+      "auc": 0.531,
+      "recall": 0.464,
+      "fpr": 0.321
+    },
+    "N7a": {
+      "auc": 0.352,
+      "recall": 0.12,
+      "fpr": 0.321
+    },
+    "N7b": {
+      "auc": 0.493,
+      "recall": 0.4,
+      "fpr": 0.321
+    },
+    "N8": {
+      "auc": 0.413,
+      "recall": 0.287,
+      "fpr": 0.321
+    }
+  },
+  "elapsed_s": 1.0
+}

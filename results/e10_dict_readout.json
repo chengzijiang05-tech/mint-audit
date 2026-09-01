@@ -1,0 +1,118 @@
+{
+  "protocol": {
+    "dict": [
+      "Ldir",
+      "absL",
+      "ACF1",
+      "ACF1sq",
+      "DFA_H",
+      "Hill",
+      "GARCHpers",
+      "bispec"
+    ],
+    "embed_dim": 64,
+    "n_windows": 350,
+    "cv": "5-fold window-level, Lasso alpha inner grid",
+    "encoder": "A0 re-trained, same seeds as e2_main"
+  },
+  "readout_r2": {
+    "Ldir": -0.041,
+    "absL": -0.078,
+    "ACF1": 0.527,
+    "ACF1sq": 0.049,
+    "DFA_H": 0.41,
+    "Hill": -0.304,
+    "GARCHpers": 0.497,
+    "bispec": -0.084
+  },
+  "coords_separation": {
+    "N1": {
+      "Ldir": 0.14,
+      "absL": -0.14,
+      "ACF1": 1.87,
+      "ACF1sq": 1.91,
+      "DFA_H": 0.06,
+      "Hill": -1.63,
+      "GARCHpers": 2.32,
+      "bispec": 0.07
+    },
+    "N2": {
+      "Ldir": -0.44,
+      "absL": -2.36,
+      "ACF1": 1.95,
+      "ACF1sq": 2.32,
+      "DFA_H": -1.08,
+      "Hill": -1.85,
+      "GARCHpers": 2.36,
+      "bispec": -0.08
+    },
+    "N3": {
+      "Ldir": -1.47,
+      "absL": 5.28,
+      "ACF1": 98.31,
+      "ACF1sq": 34.11,
+      "DFA_H": 74.54,
+      "Hill": -1.85,
+      "GARCHpers": 36.05,
+      "bispec": 2.75
+    },
+    "N4": {
+      "Ldir": 0.48,
+      "absL": 4.47,
+      "ACF1": 58.88,
+      "ACF1sq": 6.48,
+      "DFA_H": 9.81,
+      "Hill": -1.85,
+      "GARCHpers": 22.85,
+      "bispec": 2.48
+    },
+    "N5": {
+      "Ldir": -2.03,
+      "absL": -7.75,
+      "ACF1": 2.02,
+      "ACF1sq": -7.23,
+      "DFA_H": 2.14,
+      "Hill": -1.85,
+      "GARCHpers": -7.53,
+      "bispec": -1.35
+    },
+    "N7a": {
+      "Ldir": -3.67,
+      "absL": 3.01,
+      "ACF1": 2.71,
+      "ACF1sq": 4.38,
+      "DFA_H": 1.44,
+      "Hill": 4.01,
+      "GARCHpers": 2.09,
+      "bispec": 1.49
+    },
+    "N7b": {
+      "Ldir": -2.52,
+      "absL": -9.7,
+      "ACF1": -3.57,
+      "ACF1sq": 11.44,
+      "DFA_H": -3.05,
+      "Hill": 17.23,
+      "GARCHpers": -8.89,
+      "bispec": -0.41
+    },
+    "N8": {
+      "Ldir": -5.57,
+      "absL": -1.67,
+      "ACF1": -0.79,
+      "ACF1sq": 4.54,
+      "DFA_H": 0.56,
+      "Hill": 6.87,
+      "GARCHpers": -2.21,
+      "bispec": 1.3
+    }
+  },
+  "typed_vs_binary": {
+    "bench480_nonseq": {
+      "typed_overreach": 0.0,
+      "binary_overreach": 1.0,
+      "note": "480/480 outputs are statistic/price-point level (median 4-16 numbers): typed layer abstains (e6 frozen), binary threshold must judge"
+    }
+  },
+  "elapsed_s": 460.1
+}

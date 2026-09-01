@@ -1,0 +1,90 @@
+{
+  "protocol": {
+    "arms": {
+      "C8": "classical 8-feature Mahalanobis (recomputed control)",
+      "R9": "classical 8 + leverage_asym as 9th Mahalanobis coordinate (unsigned distance)",
+      "LA": "directed univariate leverage_asym, score=lev (high=suspicious), same implementation as e2_n6/e7/n7c LAonly"
+    },
+    "threshold": "per-asset cal q95 frozen",
+    "alpha": 0.05,
+    "families": "N1/N2/N3 forged at test layer, e2_main seeds (1000+wi*10+fi)",
+    "n_real_test": 28
+  },
+  "per_asset": {
+    "equity": {
+      "n_test": 8,
+      "thr_8d": 8.110372223206122,
+      "thr_9d": 8.544836374093931,
+      "thr_la": 0.005331166096371501,
+      "n_anchor": 15,
+      "mu_la": -0.007144518117383126
+    },
+    "bond": {
+      "n_test": 8,
+      "thr_8d": 40.40172952112437,
+      "thr_9d": 40.588898937945565,
+      "thr_la": -0.05888383237424003,
+      "n_anchor": 15,
+      "mu_la": -0.053016455314979734
+    },
+    "fx": {
+      "n_test": 6,
+      "thr_8d": 14.236163339157663,
+      "thr_9d": 16.23272138712435,
+      "thr_la": -0.04606531969012977,
+      "n_anchor": 11,
+      "mu_la": -0.02597754479713309
+    },
+    "gold": {
+      "n_test": 3,
+      "thr_8d": 11.875745723380167,
+      "thr_9d": 12.451113487301628,
+      "thr_la": 0.07371518508259392,
+      "n_anchor": 11,
+      "mu_la": 0.0503577721175946
+    },
+    "copper": {
+      "n_test": 3,
+      "thr_8d": 21.25254779299458,
+      "thr_9d": 21.433321083957154,
+      "thr_la": -0.07898398647810312,
+      "n_anchor": 11,
+      "mu_la": 0.005206371323981821
+    }
+  },
+  "C8": {
+    "fpr": 0.5,
+    "n2_recall": 0.5357142857142857,
+    "auc": {
+      "N1": 0.5216836734693877,
+      "N2": 0.5,
+      "N3": 0.9872448979591837
+    },
+    "n_real": 28
+  },
+  "R9": {
+    "fpr": 0.5714285714285714,
+    "n2_recall": 0.5357142857142857,
+    "auc": {
+      "N1": 0.5306122448979592,
+      "N2": 0.461734693877551,
+      "N3": 0.9910714285714286
+    },
+    "n_real": 28
+  },
+  "LA": {
+    "fpr": 0.39285714285714285,
+    "n2_recall": 0.75,
+    "auc": {
+      "N1": 0.49744897959183676,
+      "N2": 0.7831632653061225,
+      "N3": 0.6568877551020408
+    },
+    "n_real": 28
+  },
+  "lev_direction_check": {
+    "mean_real": -0.041197910363907554,
+    "mean_n2": 0.038231602010661406,
+    "note": "positive lev direction = reversed-like; real windows negative on average"
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "protocol": {
+    "generator": "TCN(5 causal blocks, rf=251d)",
+    "discriminator": "4-layer TCN + spectral norm, hinge loss",
+    "train_data": "fit-layer windows, train_end = cal start (frozen)",
+    "steps": 400,
+    "simplifications": [
+      "rf 251 vs 511+ (covers short-range vol clustering)",
+      "spectral norm vs gradient penalty",
+      "fixed window vs rolling-window conditioning",
+      "400 G/D steps vs thousands (equal CPU budget as deep baselines in e2_deep.py)"
+    ]
+  },
+  "equity": {
+    "train_windows": 15,
+    "hist": [
+      {
+        "step": 100,
+        "d": 2.011,
+        "g": -0.05
+      },
+      {
+        "step": 200,
+        "d": 2.006,
+        "g": -0.011
+      },
+      {
+        "step": 300,
+        "d": 1.989,
+        "g": -0.047
+      },
+      {
+        "step": 400,
+        "d": 2.01,
+        "g": -0.035
+      }
+    ],
+    "gen_s": 84.5
+  },
+  "bond": {
+    "train_windows": 15,
+    "hist": [
+      {
+        "step": 100,
+        "d": 2.101,
+        "g": 0.135
+      },
+      {
+        "step": 200,
+        "d": 2.007,
+        "g": 0.029
+      },
+      {
+        "step": 300,
+        "d": 1.539,
+        "g": 0.524
+      },
+      {
+        "step": 400,
+        "d": 2.045,
+        "g": 0.155
+      }
+    ],
+    "gen_s": 81.7
+  },
+  "fx": {
+    "train_windows": 12,
+    "hist": [
+      {
+        "step": 100,
+        "d": 1.994,
+        "g": 0.118
+      },
+      {
+        "step": 200,
+        "d": 2.006,
+        "g": 0.096
+      },
+      {
+        "step": 300,
+        "d": 2.042,
+        "g": 0.108
+      },
+      {
+        "step": 400,
+        "d": 1.994,
+        "g": 0.112
+      }
+    ],
+    "gen_s": 84.2
+  },
+  "gold": {
+    "train_windows": 12,
+    "hist": [
+      {
+        "step": 100,
+        "d": 2.009,
+        "g": -0.101
+      },
+      {
+        "step": 200,
+        "d": 2.03,
+        "g": -0.055
+      },
+      {
+        "step": 300,
+        "d": 1.98,
+        "g": -0.076
+      },
+      {
+        "step": 400,
+        "d": 2.011,
+        "g": -0.145
+      }
+    ],
+    "gen_s": 82.7
+  },
+  "copper": {
+    "train_windows": 12,
+    "hist": [
+      {
+        "step": 100,
+        "d": 2.034,
+        "g": -0.009
+      },
+      {
+        "step": 200,
+        "d": 1.777,
+        "g": 0.471
+      },
+      {
+        "step": 300,
+        "d": 1.999,
+        "g": 0.012
+      },
+      {
+        "step": 400,
+        "d": 1.966,
+        "g": 0.077
+      }
+    ],
+    "gen_s": 80.7
+  }
+}

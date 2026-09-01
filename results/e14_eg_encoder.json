@@ -1,0 +1,623 @@
+{
+ "n": 1000,
+ "K": 32,
+ "n_trials": 300,
+ "seed": 20260820,
+ "protocol": "candidate x = h(y), orbit = five-operator mixture, reader = deployed per-asset encoder s_theta; W_cert=(K+1)softmax(+s)_x, W_flag=(K+1)softmax(-s)_x",
+ "cells": {
+  "iid|permute|equity": {
+   "mean_rank": 16.453333333333333,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9979450256831632,
+   "e_flag_mean": 1.0019410769197383,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|permute|bond": {
+   "mean_rank": 16.10333333333333,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9994634030910997,
+   "e_flag_mean": 1.000496001738085,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|permute|fx": {
+   "mean_rank": 15.363333333333333,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0012839668793916,
+   "e_flag_mean": 0.998729491650762,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|permute|gold": {
+   "mean_rank": 15.923333333333334,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0032245437867282,
+   "e_flag_mean": 0.9973887213532834,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|permute|copper": {
+   "mean_rank": 16.063333333333333,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9974683224090487,
+   "e_flag_mean": 1.0023592473053562,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|time_reverse|equity": {
+   "mean_rank": 16.75,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9975247622171671,
+   "e_flag_mean": 1.0023667030737267,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|time_reverse|bond": {
+   "mean_rank": 16.106666666666666,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9983427532542214,
+   "e_flag_mean": 1.0016290401450014,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|time_reverse|fx": {
+   "mean_rank": 16.22,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0002565865824953,
+   "e_flag_mean": 0.9997756571240173,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|time_reverse|gold": {
+   "mean_rank": 15.063333333333333,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0041532958912485,
+   "e_flag_mean": 0.9960986309839969,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|time_reverse|copper": {
+   "mean_rank": 15.946666666666667,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0008749139143807,
+   "e_flag_mean": 0.9991837038547196,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|aaft|equity": {
+   "mean_rank": 16.006666666666668,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9998535870647227,
+   "e_flag_mean": 1.000104907331547,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|aaft|bond": {
+   "mean_rank": 15.93,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9999606539230428,
+   "e_flag_mean": 1.0000611289195211,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|aaft|fx": {
+   "mean_rank": 16.153333333333332,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9989004999424519,
+   "e_flag_mean": 1.0010263786737228,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|aaft|gold": {
+   "mean_rank": 15.956666666666667,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9991956316062554,
+   "e_flag_mean": 1.0007873428759861,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|aaft|copper": {
+   "mean_rank": 15.553333333333333,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0010926274746517,
+   "e_flag_mean": 0.9987061382633464,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|iaaft|equity": {
+   "mean_rank": 15.533333333333333,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.001107033516318,
+   "e_flag_mean": 0.9988595772810789,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|iaaft|bond": {
+   "mean_rank": 15.873333333333333,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0008683094214548,
+   "e_flag_mean": 0.9992156727292778,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|iaaft|fx": {
+   "mean_rank": 15.27,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0020716989138747,
+   "e_flag_mean": 0.9979537619112697,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|iaaft|gold": {
+   "mean_rank": 16.586666666666666,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9956893502947465,
+   "e_flag_mean": 1.0039820256954501,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|iaaft|copper": {
+   "mean_rank": 17.546666666666667,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9909598526745886,
+   "e_flag_mean": 1.0085962832422761,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|block_perm|equity": {
+   "mean_rank": 16.69,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9977916562248776,
+   "e_flag_mean": 1.0021858485456485,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|block_perm|bond": {
+   "mean_rank": 16.063333333333333,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9988947435867223,
+   "e_flag_mean": 1.0010858686868214,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|block_perm|fx": {
+   "mean_rank": 16.616666666666667,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9974384721216122,
+   "e_flag_mean": 1.002431014612317,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|block_perm|gold": {
+   "mean_rank": 16.796666666666667,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9968389645778044,
+   "e_flag_mean": 1.0030611043400324,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "iid|block_perm|copper": {
+   "mean_rank": 16.62,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9975261965582821,
+   "e_flag_mean": 1.0027086461233012,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|permute|equity": {
+   "mean_rank": 15.126666666666667,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.00156762044604,
+   "e_flag_mean": 0.9983768607409044,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|permute|bond": {
+   "mean_rank": 15.033333333333333,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0013973921563522,
+   "e_flag_mean": 0.9985402892013364,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|permute|fx": {
+   "mean_rank": 14.516666666666667,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0049352804054705,
+   "e_flag_mean": 0.9952070998743598,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|permute|gold": {
+   "mean_rank": 16.206666666666667,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.000673306117987,
+   "e_flag_mean": 0.9999158447351393,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|permute|copper": {
+   "mean_rank": 15.69,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9990173016340573,
+   "e_flag_mean": 1.0008880832278535,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|time_reverse|equity": {
+   "mean_rank": 14.31,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.004536966346287,
+   "e_flag_mean": 0.9952198110646556,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|time_reverse|bond": {
+   "mean_rank": 14.08,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0048494340055334,
+   "e_flag_mean": 0.9951716013861922,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|time_reverse|fx": {
+   "mean_rank": 14.346666666666666,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0051822888300666,
+   "e_flag_mean": 0.9947846914110983,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|time_reverse|gold": {
+   "mean_rank": 16.273333333333333,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9979551741759474,
+   "e_flag_mean": 1.0018906119350084,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|time_reverse|copper": {
+   "mean_rank": 16.416666666666668,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0000503982934525,
+   "e_flag_mean": 1.0005408260633126,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|aaft|equity": {
+   "mean_rank": 14.413333333333334,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.004443881414715,
+   "e_flag_mean": 0.9953202350487513,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|aaft|bond": {
+   "mean_rank": 13.64,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.006273223618726,
+   "e_flag_mean": 0.9937652931020151,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|aaft|fx": {
+   "mean_rank": 15.5,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0026352174982927,
+   "e_flag_mean": 0.997474274426761,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|aaft|gold": {
+   "mean_rank": 16.436666666666667,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9978774898859225,
+   "e_flag_mean": 1.0020007663385933,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|aaft|copper": {
+   "mean_rank": 15.616666666666667,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0034666762729527,
+   "e_flag_mean": 0.9969093621600849,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|iaaft|equity": {
+   "mean_rank": 14.31,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0052434056701336,
+   "e_flag_mean": 0.9946094806261556,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|iaaft|bond": {
+   "mean_rank": 14.576666666666666,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.003357036675601,
+   "e_flag_mean": 0.996559406236337,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|iaaft|fx": {
+   "mean_rank": 15.043333333333333,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.004612850623806,
+   "e_flag_mean": 0.9955973442952707,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|iaaft|gold": {
+   "mean_rank": 16.67,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9963685218810069,
+   "e_flag_mean": 1.003505876234465,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|iaaft|copper": {
+   "mean_rank": 17.463333333333335,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9942147536246337,
+   "e_flag_mean": 1.00574023475354,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|block_perm|equity": {
+   "mean_rank": 13.68,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0063721932171055,
+   "e_flag_mean": 0.9935635349918089,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|block_perm|bond": {
+   "mean_rank": 15.196666666666667,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0012649616461855,
+   "e_flag_mean": 0.998605809379734,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|block_perm|fx": {
+   "mean_rank": 14.8,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0043372111767437,
+   "e_flag_mean": 0.9958341998145619,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|block_perm|gold": {
+   "mean_rank": 16.583333333333332,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9979603488400365,
+   "e_flag_mean": 1.002219808525956,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "ar1|block_perm|copper": {
+   "mean_rank": 15.633333333333333,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.001312003054382,
+   "e_flag_mean": 0.9984026203830124,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|permute|equity": {
+   "mean_rank": 16.416666666666668,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.999752084923472,
+   "e_flag_mean": 1.0003777401201228,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|permute|bond": {
+   "mean_rank": 16.76,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9980267866494722,
+   "e_flag_mean": 1.0020173657340523,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|permute|fx": {
+   "mean_rank": 16.06,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0002549905598663,
+   "e_flag_mean": 0.9997413598704176,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|permute|gold": {
+   "mean_rank": 16.30666666666667,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.002732286222391,
+   "e_flag_mean": 0.9980437715537249,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|permute|copper": {
+   "mean_rank": 15.876666666666667,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0013726977880832,
+   "e_flag_mean": 0.9988123428075346,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|time_reverse|equity": {
+   "mean_rank": 3.4166666666666665,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 3.5258726729382155,
+   "e_flag_mean": 0.35249892692959417,
+   "p_cert_ge_20": 0.013333333333333334,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|time_reverse|bond": {
+   "mean_rank": 6.36,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.6533568174455415,
+   "e_flag_mean": 0.7130107707586572,
+   "p_cert_ge_20": 0.0033333333333333335,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|time_reverse|fx": {
+   "mean_rank": 7.53,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0615523795786956,
+   "e_flag_mean": 0.7968464032826184,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|time_reverse|gold": {
+   "mean_rank": 2.3033333333333332,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 4.9631362271872375,
+   "e_flag_mean": 0.40889531224356396,
+   "p_cert_ge_20": 0.03333333333333333,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|time_reverse|copper": {
+   "mean_rank": 4.433333333333334,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 3.0113032454470168,
+   "e_flag_mean": 0.47226905846755074,
+   "p_cert_ge_20": 0.0033333333333333335,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|aaft|equity": {
+   "mean_rank": 16.3,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.998952926996904,
+   "e_flag_mean": 1.0009316637264456,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|aaft|bond": {
+   "mean_rank": 17.74,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9964856375593365,
+   "e_flag_mean": 1.0034251917193258,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|aaft|fx": {
+   "mean_rank": 16.32,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9990240758093704,
+   "e_flag_mean": 1.000861098352617,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|aaft|gold": {
+   "mean_rank": 16.233333333333334,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9979281606987481,
+   "e_flag_mean": 1.0018753930510707,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|aaft|copper": {
+   "mean_rank": 14.833333333333334,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0099017814694202,
+   "e_flag_mean": 0.9917563198400224,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|iaaft|equity": {
+   "mean_rank": 16.303333333333335,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9985864185936073,
+   "e_flag_mean": 1.001321610504907,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|iaaft|bond": {
+   "mean_rank": 15.62,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0001895725124408,
+   "e_flag_mean": 0.999791749219183,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|iaaft|fx": {
+   "mean_rank": 15.043333333333333,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.002728462760587,
+   "e_flag_mean": 0.9971907699170237,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|iaaft|gold": {
+   "mean_rank": 15.73,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0012385127270484,
+   "e_flag_mean": 0.9988894580066596,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|iaaft|copper": {
+   "mean_rank": 15.82,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 0.9983708230480052,
+   "e_flag_mean": 1.0013319246896497,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|block_perm|equity": {
+   "mean_rank": 7.39,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.1620004327229985,
+   "e_flag_mean": 0.8556044053378601,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|block_perm|bond": {
+   "mean_rank": 8.9,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0734927229774693,
+   "e_flag_mean": 0.9379652115299612,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|block_perm|fx": {
+   "mean_rank": 7.38,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0894177776848701,
+   "e_flag_mean": 0.9156924624866645,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|block_perm|gold": {
+   "mean_rank": 10.813333333333333,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.0596016485212962,
+   "e_flag_mean": 0.9457580275760279,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  },
+  "gjr|block_perm|copper": {
+   "mean_rank": 8.466666666666667,
+   "uniform_rank": 16.5,
+   "e_cert_mean": 1.1371324016173363,
+   "e_flag_mean": 0.8812349783343022,
+   "p_cert_ge_20": 0.0,
+   "p_flag_ge_20": 0.0
+  }
+ },
+ "summary": {
+  "eps_G_cert": 3.9631,
+  "argmax_cert": "gjr|time_reverse|gold",
+  "eps_G_flag": 0.0086,
+  "argmax_flag": "iid|iaaft|copper",
+  "p_any_cert_ge_20": 0.0007111111111111111,
+  "p_any_flag_ge_20": 0.0,
+  "note": "negative deviations are conservative and not counted; eps_G is the maximal positive deviation of E[W] from 1 across all 150 cells (30 protocol cells x 5 encoders)",
+  "scaled_alpha_cert_tau115": 0.0,
+  "finite_horizon_bound_cert_tau115": 5.1396378676865095e+78,
+  "scaled_alpha_flag_tau115": 0.01868,
+  "finite_horizon_bound_flag_tau115": 0.1338
+ },
+ "elapsed_s": 2391.1
+}

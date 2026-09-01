@@ -1,0 +1,107 @@
+{
+  "protocol": {
+    "models": "GJR(1,1) & EGARCH(1,1), MLE on fit layer, per-asset params",
+    "innovations": {
+      "skewt": "skewnorm(-0.2)+t(5) mix, unit var",
+      "boot": "fit-layer residual bootstrap"
+    },
+    "per_asset_per_config": 4,
+    "scale_align": "asset test-layer mean std",
+    "leverage_by_construction": true,
+    "configs": [
+      "gjr_skewt",
+      "gjr_boot",
+      "egarch_skewt",
+      "egarch_boot"
+    ]
+  },
+  "params": {
+    "equity": {
+      "gjr_wagr_b": [
+        1e-05,
+        0.05,
+        0.06,
+        0.88
+      ],
+      "egarch_wath_b": [
+        -0.11158,
+        0.15966,
+        -0.00123,
+        0.98584
+      ],
+      "gjr_persistence": 0.96,
+      "egarch_persistence": 0.9858,
+      "n_test": 8
+    },
+    "bond": {
+      "gjr_wagr_b": [
+        0.0,
+        0.0929,
+        0.08,
+        0.82603
+      ],
+      "egarch_wath_b": [
+        -0.33973,
+        0.21156,
+        0.00391,
+        0.97391
+      ],
+      "gjr_persistence": 0.9589,
+      "egarch_persistence": 0.9739,
+      "n_test": 8
+    },
+    "fx": {
+      "gjr_wagr_b": [
+        0.0,
+        0.08667,
+        0.0534,
+        0.78321
+      ],
+      "egarch_wath_b": [
+        -4.39761,
+        0.37696,
+        -0.0656,
+        0.64111
+      ],
+      "gjr_persistence": 0.8966,
+      "egarch_persistence": 0.6411,
+      "n_test": 6
+    },
+    "gold": {
+      "gjr_wagr_b": [
+        0.0,
+        0.05,
+        0.06,
+        0.88
+      ],
+      "egarch_wath_b": [
+        -0.04013,
+        0.07029,
+        0.03266,
+        0.9954
+      ],
+      "gjr_persistence": 0.96,
+      "egarch_persistence": 0.9954,
+      "n_test": 3
+    },
+    "copper": {
+      "gjr_wagr_b": [
+        1e-05,
+        0.08,
+        0.08,
+        0.82
+      ],
+      "egarch_wath_b": [
+        -0.55782,
+        0.2233,
+        0.01462,
+        0.93772
+      ],
+      "gjr_persistence": 0.94,
+      "egarch_persistence": 0.9377,
+      "n_test": 3
+    }
+  },
+  "n_series": 80,
+  "elapsed_s": 125.8
+}

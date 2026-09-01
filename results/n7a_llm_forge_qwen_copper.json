@@ -1,0 +1,158 @@
+{
+  "protocol": {
+    "mechanism": "textualize->iterative autoregressive re-prompting->parse (SDForger sliding-window mechanism, raw numeric template, numeric-constrained decoding)",
+    "forge_len": 1000,
+    "prefix_len": 100,
+    "seg_new": 100,
+    "seg_tokens": 400,
+    "max_segs": 40,
+    "recontext": 60,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "temp_escape": "+0.25 per stall/discard (cap 1.4, reset on clean segment)",
+    "segment_gates": {
+      "stall": ">=20 identical consecutive values -> run cut back",
+      "diversity": "uniq ratio < 0.2 (min 10) -> segment dropped",
+      "outlier": "|v| > 8.0x context max -> segment dropped"
+    },
+    "acceptance": "len>=1000 AND uniq_ratio>=0.3",
+    "early_stop": "generation halts when 6 identical values appear in decoded tail",
+    "retries_per_gap": 3,
+    "per_model_target": 5,
+    "seed": 20260821,
+    "scale_align": "asset test-layer mean std",
+    "models": {
+      "qwen2.5-0.5b-instruct": "Qwen/Qwen2.5-0.5B-Instruct"
+    }
+  },
+  "n_attempts": 7,
+  "n_series_saved": 15,
+  "log": [
+    {
+      "asset": "copper",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1035,
+      "segs": 27,
+      "uniq_ratio": 0.305,
+      "discards": {
+        "empty": 0,
+        "div": 4,
+        "outlier": 0
+      },
+      "gen_tokens": 10800,
+      "gen_s": 1337.9,
+      "gen_seed": 20342599,
+      "attempt": 0,
+      "prompt_ctx_window": 1
+    },
+    {
+      "asset": "copper",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1035,
+      "segs": 24,
+      "uniq_ratio": 0.108,
+      "discards": {
+        "empty": 0,
+        "div": 1,
+        "outlier": 0
+      },
+      "gen_tokens": 9380,
+      "gen_s": 1269.7,
+      "gen_seed": 20342600,
+      "attempt": 0,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "copper",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1035,
+      "segs": 23,
+      "uniq_ratio": 0.378,
+      "discards": {
+        "empty": 0,
+        "div": 0,
+        "outlier": 0
+      },
+      "gen_tokens": 9200,
+      "gen_s": 1159.7,
+      "gen_seed": 20420377,
+      "attempt": 1,
+      "prompt_ctx_window": 3
+    },
+    {
+      "asset": "copper",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1035,
+      "segs": 23,
+      "uniq_ratio": 0.185,
+      "discards": {
+        "empty": 0,
+        "div": 0,
+        "outlier": 0
+      },
+      "gen_tokens": 9200,
+      "gen_s": 1248.5,
+      "gen_seed": 20342601,
+      "attempt": 0,
+      "prompt_ctx_window": 3
+    },
+    {
+      "asset": "copper",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1017,
+      "segs": 29,
+      "uniq_ratio": 0.312,
+      "discards": {
+        "empty": 0,
+        "div": 6,
+        "outlier": 0
+      },
+      "gen_tokens": 9240,
+      "gen_s": 1239.5,
+      "gen_seed": 20420378,
+      "attempt": 1,
+      "prompt_ctx_window": 4
+    },
+    {
+      "asset": "copper",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1035,
+      "segs": 25,
+      "uniq_ratio": 0.239,
+      "discards": {
+        "empty": 0,
+        "div": 2,
+        "outlier": 0
+      },
+      "gen_tokens": 9720,
+      "gen_s": 1176.1,
+      "gen_seed": 20342602,
+      "attempt": 0,
+      "prompt_ctx_window": 4
+    },
+    {
+      "asset": "copper",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1022,
+      "segs": 25,
+      "uniq_ratio": 0.336,
+      "discards": {
+        "empty": 0,
+        "div": 2,
+        "outlier": 0
+      },
+      "gen_tokens": 9120,
+      "gen_s": 1104.6,
+      "gen_seed": 20420379,
+      "attempt": 1,
+      "prompt_ctx_window": 5
+    }
+  ]
+}

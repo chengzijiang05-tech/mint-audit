@@ -1,0 +1,500 @@
+{
+  "protocol": {
+    "mechanism": "textualize->iterative autoregressive re-prompting->parse (SDForger sliding-window mechanism, raw numeric template, numeric-constrained decoding)",
+    "forge_len": 1000,
+    "prefix_len": 100,
+    "seg_new": 100,
+    "seg_tokens": 400,
+    "max_segs": 40,
+    "recontext": 60,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "temp_escape": "+0.25 per stall/discard (cap 1.4, reset on clean segment)",
+    "segment_gates": {
+      "stall": ">=20 identical consecutive values -> run cut back",
+      "diversity": "uniq ratio < 0.2 (min 10) -> segment dropped",
+      "outlier": "|v| > 8.0x context max -> segment dropped"
+    },
+    "acceptance": "len>=1000 AND uniq_ratio>=0.3",
+    "early_stop": "generation halts when 6 identical values appear in decoded tail",
+    "retries_per_gap": 3,
+    "per_model_target": 5,
+    "seed": 20260821,
+    "scale_align": "asset test-layer mean std",
+    "models": {
+      "qwen2.5-0.5b-instruct": "Qwen/Qwen2.5-0.5B-Instruct"
+    }
+  },
+  "n_attempts": 26,
+  "n_series_saved": 12,
+  "log": [
+    {
+      "asset": "equity",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1035,
+      "segs": 25,
+      "uniq_ratio": 0.742,
+      "discards": {
+        "empty": 0,
+        "div": 2,
+        "outlier": 0
+      },
+      "gen_tokens": 9260,
+      "gen_s": 1132.2,
+      "gen_seed": 20338598,
+      "attempt": 0,
+      "prompt_ctx_window": 0
+    },
+    {
+      "asset": "bond",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 664,
+      "segs": 22,
+      "uniq_ratio": 0.286,
+      "discards": {
+        "empty": 0,
+        "div": 6,
+        "outlier": 1
+      },
+      "gen_tokens": 6820,
+      "gen_s": 964.5,
+      "gen_seed": 20339599,
+      "attempt": 0,
+      "prompt_ctx_window": 0
+    },
+    {
+      "asset": "bond",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1035,
+      "segs": 26,
+      "uniq_ratio": 0.209,
+      "discards": {
+        "empty": 0,
+        "div": 3,
+        "outlier": 0
+      },
+      "gen_tokens": 10400,
+      "gen_s": 1682.3,
+      "gen_seed": 20417376,
+      "attempt": 1,
+      "prompt_ctx_window": 1
+    },
+    {
+      "asset": "bond",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 45,
+      "segs": 7,
+      "uniq_ratio": 0.822,
+      "discards": {
+        "empty": 0,
+        "div": 5,
+        "outlier": 1
+      },
+      "gen_tokens": 900,
+      "gen_s": 144.8,
+      "gen_seed": 20495153,
+      "attempt": 2,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "fx",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1035,
+      "segs": 25,
+      "uniq_ratio": 0.797,
+      "discards": {
+        "empty": 0,
+        "div": 1,
+        "outlier": 1
+      },
+      "gen_tokens": 9640,
+      "gen_s": 1533.6,
+      "gen_seed": 20340600,
+      "attempt": 0,
+      "prompt_ctx_window": 0
+    },
+    {
+      "asset": "bond",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1035,
+      "segs": 27,
+      "uniq_ratio": 0.229,
+      "discards": {
+        "empty": 0,
+        "div": 4,
+        "outlier": 0
+      },
+      "gen_tokens": 9560,
+      "gen_s": 1108.5,
+      "gen_seed": 28117299,
+      "attempt": 0,
+      "prompt_ctx_window": 0
+    },
+    {
+      "asset": "bond",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1033,
+      "segs": 26,
+      "uniq_ratio": 0.54,
+      "discards": {
+        "empty": 0,
+        "div": 3,
+        "outlier": 0
+      },
+      "gen_tokens": 9360,
+      "gen_s": 1080.0,
+      "gen_seed": 28195076,
+      "attempt": 1,
+      "prompt_ctx_window": 1
+    },
+    {
+      "asset": "gold",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1035,
+      "segs": 24,
+      "uniq_ratio": 0.455,
+      "discards": {
+        "empty": 0,
+        "div": 1,
+        "outlier": 0
+      },
+      "gen_tokens": 9480,
+      "gen_s": 1231.7,
+      "gen_seed": 28119301,
+      "attempt": 0,
+      "prompt_ctx_window": 0
+    },
+    {
+      "asset": "copper",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1035,
+      "segs": 24,
+      "uniq_ratio": 0.535,
+      "discards": {
+        "empty": 0,
+        "div": 1,
+        "outlier": 0
+      },
+      "gen_tokens": 9260,
+      "gen_s": 1125.9,
+      "gen_seed": 35898002,
+      "attempt": 0,
+      "prompt_ctx_window": 0
+    },
+    {
+      "asset": "equity",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1035,
+      "segs": 23,
+      "uniq_ratio": 0.249,
+      "discards": {
+        "empty": 0,
+        "div": 0,
+        "outlier": 0
+      },
+      "gen_tokens": 9200,
+      "gen_s": 3863.3,
+      "gen_seed": 20338599,
+      "attempt": 0,
+      "prompt_ctx_window": 1
+    },
+    {
+      "asset": "equity",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1035,
+      "segs": 25,
+      "uniq_ratio": 0.508,
+      "discards": {
+        "empty": 0,
+        "div": 2,
+        "outlier": 0
+      },
+      "gen_tokens": 9640,
+      "gen_s": 3992.0,
+      "gen_seed": 20416376,
+      "attempt": 1,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "equity",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1034,
+      "segs": 29,
+      "uniq_ratio": 0.185,
+      "discards": {
+        "empty": 0,
+        "div": 6,
+        "outlier": 0
+      },
+      "gen_tokens": 10980,
+      "gen_s": 2795.6,
+      "gen_seed": 20338600,
+      "attempt": 0,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "equity",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1035,
+      "segs": 26,
+      "uniq_ratio": 0.253,
+      "discards": {
+        "empty": 0,
+        "div": 2,
+        "outlier": 1
+      },
+      "gen_tokens": 9660,
+      "gen_s": 2093.4,
+      "gen_seed": 20416377,
+      "attempt": 1,
+      "prompt_ctx_window": 3
+    },
+    {
+      "asset": "equity",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1035,
+      "segs": 29,
+      "uniq_ratio": 0.256,
+      "discards": {
+        "empty": 0,
+        "div": 6,
+        "outlier": 0
+      },
+      "gen_tokens": 11160,
+      "gen_s": 2429.1,
+      "gen_seed": 20494154,
+      "attempt": 2,
+      "prompt_ctx_window": 4
+    },
+    {
+      "asset": "equity",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1035,
+      "segs": 26,
+      "uniq_ratio": 0.138,
+      "discards": {
+        "empty": 0,
+        "div": 2,
+        "outlier": 1
+      },
+      "gen_tokens": 10040,
+      "gen_s": 2167.2,
+      "gen_seed": 20338601,
+      "attempt": 0,
+      "prompt_ctx_window": 3
+    },
+    {
+      "asset": "equity",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1024,
+      "segs": 24,
+      "uniq_ratio": 0.395,
+      "discards": {
+        "empty": 0,
+        "div": 1,
+        "outlier": 0
+      },
+      "gen_tokens": 9340,
+      "gen_s": 2033.3,
+      "gen_seed": 20416378,
+      "attempt": 1,
+      "prompt_ctx_window": 4
+    },
+    {
+      "asset": "equity",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1035,
+      "segs": 24,
+      "uniq_ratio": 0.406,
+      "discards": {
+        "empty": 0,
+        "div": 1,
+        "outlier": 0
+      },
+      "gen_tokens": 9300,
+      "gen_s": 2025.0,
+      "gen_seed": 20338602,
+      "attempt": 0,
+      "prompt_ctx_window": 4
+    },
+    {
+      "asset": "bond",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1034,
+      "segs": 28,
+      "uniq_ratio": 0.117,
+      "discards": {
+        "empty": 0,
+        "div": 5,
+        "outlier": 0
+      },
+      "gen_tokens": 11200,
+      "gen_s": 2436.9,
+      "gen_seed": 20339604,
+      "attempt": 0,
+      "prompt_ctx_window": 1
+    },
+    {
+      "asset": "bond",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1035,
+      "segs": 25,
+      "uniq_ratio": 0.235,
+      "discards": {
+        "empty": 0,
+        "div": 2,
+        "outlier": 0
+      },
+      "gen_tokens": 9620,
+      "gen_s": 2097.0,
+      "gen_seed": 20417381,
+      "attempt": 1,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "bond",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1035,
+      "segs": 30,
+      "uniq_ratio": 0.13,
+      "discards": {
+        "empty": 0,
+        "div": 7,
+        "outlier": 0
+      },
+      "gen_tokens": 11080,
+      "gen_s": 2402.0,
+      "gen_seed": 20495158,
+      "attempt": 2,
+      "prompt_ctx_window": 3
+    },
+    {
+      "asset": "bond",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1035,
+      "segs": 25,
+      "uniq_ratio": 0.197,
+      "discards": {
+        "empty": 0,
+        "div": 2,
+        "outlier": 0
+      },
+      "gen_tokens": 9700,
+      "gen_s": 1229.9,
+      "gen_seed": 20339605,
+      "attempt": 0,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "bond",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1035,
+      "segs": 23,
+      "uniq_ratio": 0.486,
+      "discards": {
+        "empty": 0,
+        "div": 0,
+        "outlier": 0
+      },
+      "gen_tokens": 9200,
+      "gen_s": 1125.3,
+      "gen_seed": 20417382,
+      "attempt": 1,
+      "prompt_ctx_window": 3
+    },
+    {
+      "asset": "bond",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1010,
+      "segs": 27,
+      "uniq_ratio": 0.586,
+      "discards": {
+        "empty": 0,
+        "div": 4,
+        "outlier": 0
+      },
+      "gen_tokens": 9080,
+      "gen_s": 1114.5,
+      "gen_seed": 20339606,
+      "attempt": 0,
+      "prompt_ctx_window": 3
+    },
+    {
+      "asset": "bond",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": false,
+      "n_generated": 1015,
+      "segs": 26,
+      "uniq_ratio": 0.206,
+      "discards": {
+        "empty": 0,
+        "div": 3,
+        "outlier": 0
+      },
+      "gen_tokens": 9360,
+      "gen_s": 1149.5,
+      "gen_seed": 20339607,
+      "attempt": 0,
+      "prompt_ctx_window": 4
+    },
+    {
+      "asset": "bond",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1035,
+      "segs": 25,
+      "uniq_ratio": 0.725,
+      "discards": {
+        "empty": 0,
+        "div": 2,
+        "outlier": 0
+      },
+      "gen_tokens": 9360,
+      "gen_s": 1149.1,
+      "gen_seed": 20417384,
+      "attempt": 1,
+      "prompt_ctx_window": 5
+    },
+    {
+      "asset": "bond",
+      "model": "qwen2.5-0.5b-instruct",
+      "ok": true,
+      "n_generated": 1035,
+      "segs": 23,
+      "uniq_ratio": 0.763,
+      "discards": {
+        "empty": 0,
+        "div": 0,
+        "outlier": 0
+      },
+      "gen_tokens": 9200,
+      "gen_s": 1114.6,
+      "gen_seed": 43672699,
+      "attempt": 0,
+      "prompt_ctx_window": 1
+    }
+  ]
+}

@@ -1,0 +1,806 @@
+{
+  "protocol": {
+    "mechanism": "textualize->iterative autoregressive re-prompting->parse (SDForger sliding-window mechanism, raw numeric template, numeric-constrained decoding)",
+    "forge_len": 1000,
+    "prefix_len": 100,
+    "seg_new": 100,
+    "seg_tokens": 400,
+    "max_segs": 40,
+    "recontext": 60,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "temp_escape": "+0.25 per stall/discard (cap 1.4, reset on clean segment)",
+    "segment_gates": {
+      "stall": ">=20 identical consecutive values -> run cut back",
+      "diversity": "uniq ratio < 0.2 (min 10) -> segment dropped",
+      "outlier": "|v| > 8.0x context max -> segment dropped"
+    },
+    "acceptance": "len>=1000 AND uniq_ratio>=0.3",
+    "early_stop": "generation halts when 6 identical values appear in decoded tail",
+    "retries_per_gap": 3,
+    "per_model_target": 5,
+    "seed": 20260821,
+    "scale_align": "asset test-layer mean std",
+    "models": {
+      "gpt2-medium": "local modelscope cache, gpt2-medium"
+    }
+  },
+  "n_attempts": 43,
+  "n_series_saved": 25,
+  "log": [
+    {
+      "asset": "equity",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1048,
+      "segs": 19,
+      "uniq_ratio": 0.784,
+      "discards": {
+        "empty": 0,
+        "div": 3,
+        "outlier": 0
+      },
+      "gen_tokens": 6400,
+      "gen_s": 1094.0,
+      "gen_seed": 20338598,
+      "attempt": 0,
+      "prompt_ctx_window": 0
+    },
+    {
+      "asset": "bond",
+      "model": "gpt2-medium",
+      "ok": false,
+      "n_generated": 0,
+      "segs": 6,
+      "uniq_ratio": 0.0,
+      "discards": {
+        "empty": 1,
+        "div": 1,
+        "outlier": 4
+      },
+      "gen_tokens": 2200,
+      "gen_s": 308.3,
+      "gen_seed": 20339599,
+      "attempt": 0,
+      "prompt_ctx_window": 0
+    },
+    {
+      "asset": "bond",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1019,
+      "segs": 19,
+      "uniq_ratio": 0.455,
+      "discards": {
+        "empty": 0,
+        "div": 4,
+        "outlier": 1
+      },
+      "gen_tokens": 6500,
+      "gen_s": 998.3,
+      "gen_seed": 20417376,
+      "attempt": 1,
+      "prompt_ctx_window": 1
+    },
+    {
+      "asset": "fx",
+      "model": "gpt2-medium",
+      "ok": false,
+      "n_generated": 55,
+      "segs": 7,
+      "uniq_ratio": 0.564,
+      "discards": {
+        "empty": 0,
+        "div": 5,
+        "outlier": 1
+      },
+      "gen_tokens": 780,
+      "gen_s": 116.0,
+      "gen_seed": 20340600,
+      "attempt": 0,
+      "prompt_ctx_window": 0
+    },
+    {
+      "asset": "fx",
+      "model": "gpt2-medium",
+      "ok": false,
+      "n_generated": 258,
+      "segs": 9,
+      "uniq_ratio": 0.384,
+      "discards": {
+        "empty": 0,
+        "div": 5,
+        "outlier": 1
+      },
+      "gen_tokens": 2440,
+      "gen_s": 375.2,
+      "gen_seed": 20418377,
+      "attempt": 1,
+      "prompt_ctx_window": 1
+    },
+    {
+      "asset": "fx",
+      "model": "gpt2-medium",
+      "ok": false,
+      "n_generated": 243,
+      "segs": 11,
+      "uniq_ratio": 0.243,
+      "discards": {
+        "empty": 0,
+        "div": 5,
+        "outlier": 3
+      },
+      "gen_tokens": 4120,
+      "gen_s": 625.0,
+      "gen_seed": 20496154,
+      "attempt": 2,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "gold",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1013,
+      "segs": 17,
+      "uniq_ratio": 0.456,
+      "discards": {
+        "empty": 0,
+        "div": 2,
+        "outlier": 2
+      },
+      "gen_tokens": 6040,
+      "gen_s": 877.9,
+      "gen_seed": 20341601,
+      "attempt": 0,
+      "prompt_ctx_window": 0
+    },
+    {
+      "asset": "copper",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1063,
+      "segs": 21,
+      "uniq_ratio": 0.398,
+      "discards": {
+        "empty": 0,
+        "div": 5,
+        "outlier": 1
+      },
+      "gen_tokens": 6060,
+      "gen_s": 941.6,
+      "gen_seed": 20342602,
+      "attempt": 0,
+      "prompt_ctx_window": 0
+    },
+    {
+      "asset": "fx",
+      "model": "gpt2-medium",
+      "ok": false,
+      "n_generated": 55,
+      "segs": 7,
+      "uniq_ratio": 0.564,
+      "discards": {
+        "empty": 0,
+        "div": 5,
+        "outlier": 1
+      },
+      "gen_tokens": 780,
+      "gen_s": 130.8,
+      "gen_seed": 20340600,
+      "attempt": 0,
+      "prompt_ctx_window": 0
+    },
+    {
+      "asset": "fx",
+      "model": "gpt2-medium",
+      "ok": false,
+      "n_generated": 258,
+      "segs": 9,
+      "uniq_ratio": 0.384,
+      "discards": {
+        "empty": 0,
+        "div": 5,
+        "outlier": 1
+      },
+      "gen_tokens": 2440,
+      "gen_s": 394.4,
+      "gen_seed": 20418377,
+      "attempt": 1,
+      "prompt_ctx_window": 1
+    },
+    {
+      "asset": "fx",
+      "model": "gpt2-medium",
+      "ok": false,
+      "n_generated": 243,
+      "segs": 11,
+      "uniq_ratio": 0.243,
+      "discards": {
+        "empty": 0,
+        "div": 5,
+        "outlier": 3
+      },
+      "gen_tokens": 4120,
+      "gen_s": 674.2,
+      "gen_seed": 20496154,
+      "attempt": 2,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "fx",
+      "model": "gpt2-medium",
+      "ok": false,
+      "n_generated": 0,
+      "segs": 6,
+      "uniq_ratio": 0.0,
+      "discards": {
+        "empty": 0,
+        "div": 1,
+        "outlier": 5
+      },
+      "gen_tokens": 2400,
+      "gen_s": 336.2,
+      "gen_seed": 28118300,
+      "attempt": 0,
+      "prompt_ctx_window": 0
+    },
+    {
+      "asset": "fx",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1050,
+      "segs": 18,
+      "uniq_ratio": 0.556,
+      "discards": {
+        "empty": 0,
+        "div": 4,
+        "outlier": 0
+      },
+      "gen_tokens": 5440,
+      "gen_s": 824.5,
+      "gen_seed": 28196077,
+      "attempt": 1,
+      "prompt_ctx_window": 1
+    },
+    {
+      "asset": "equity",
+      "model": "gpt2-medium",
+      "ok": false,
+      "n_generated": 301,
+      "segs": 10,
+      "uniq_ratio": 0.87,
+      "discards": {
+        "empty": 0,
+        "div": 5,
+        "outlier": 1
+      },
+      "gen_tokens": 2120,
+      "gen_s": 569.6,
+      "gen_seed": 20338599,
+      "attempt": 0,
+      "prompt_ctx_window": 1
+    },
+    {
+      "asset": "equity",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1012,
+      "segs": 16,
+      "uniq_ratio": 0.529,
+      "discards": {
+        "empty": 0,
+        "div": 1,
+        "outlier": 1
+      },
+      "gen_tokens": 6020,
+      "gen_s": 1624.8,
+      "gen_seed": 20416376,
+      "attempt": 1,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "equity",
+      "model": "gpt2-medium",
+      "ok": false,
+      "n_generated": 966,
+      "segs": 26,
+      "uniq_ratio": 0.557,
+      "discards": {
+        "empty": 0,
+        "div": 8,
+        "outlier": 3
+      },
+      "gen_tokens": 8000,
+      "gen_s": 2043.7,
+      "gen_seed": 20338600,
+      "attempt": 0,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "equity",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1051,
+      "segs": 17,
+      "uniq_ratio": 0.637,
+      "discards": {
+        "empty": 0,
+        "div": 2,
+        "outlier": 0
+      },
+      "gen_tokens": 6740,
+      "gen_s": 1717.4,
+      "gen_seed": 20416377,
+      "attempt": 1,
+      "prompt_ctx_window": 3
+    },
+    {
+      "asset": "equity",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1081,
+      "segs": 28,
+      "uniq_ratio": 0.6,
+      "discards": {
+        "empty": 0,
+        "div": 9,
+        "outlier": 3
+      },
+      "gen_tokens": 8060,
+      "gen_s": 2045.4,
+      "gen_seed": 20338601,
+      "attempt": 0,
+      "prompt_ctx_window": 3
+    },
+    {
+      "asset": "equity",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1044,
+      "segs": 17,
+      "uniq_ratio": 0.644,
+      "discards": {
+        "empty": 0,
+        "div": 3,
+        "outlier": 0
+      },
+      "gen_tokens": 5700,
+      "gen_s": 1147.6,
+      "gen_seed": 20338602,
+      "attempt": 0,
+      "prompt_ctx_window": 4
+    },
+    {
+      "asset": "bond",
+      "model": "gpt2-medium",
+      "ok": false,
+      "n_generated": 1016,
+      "segs": 23,
+      "uniq_ratio": 0.219,
+      "discards": {
+        "empty": 0,
+        "div": 7,
+        "outlier": 2
+      },
+      "gen_tokens": 6680,
+      "gen_s": 942.0,
+      "gen_seed": 20339604,
+      "attempt": 0,
+      "prompt_ctx_window": 1
+    },
+    {
+      "asset": "bond",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1034,
+      "segs": 16,
+      "uniq_ratio": 0.736,
+      "discards": {
+        "empty": 0,
+        "div": 1,
+        "outlier": 0
+      },
+      "gen_tokens": 5880,
+      "gen_s": 847.0,
+      "gen_seed": 20417381,
+      "attempt": 1,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "bond",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1050,
+      "segs": 17,
+      "uniq_ratio": 0.589,
+      "discards": {
+        "empty": 0,
+        "div": 2,
+        "outlier": 0
+      },
+      "gen_tokens": 5780,
+      "gen_s": 825.1,
+      "gen_seed": 20339605,
+      "attempt": 0,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "bond",
+      "model": "gpt2-medium",
+      "ok": false,
+      "n_generated": 835,
+      "segs": 22,
+      "uniq_ratio": 0.316,
+      "discards": {
+        "empty": 0,
+        "div": 6,
+        "outlier": 5
+      },
+      "gen_tokens": 7800,
+      "gen_s": 1113.8,
+      "gen_seed": 20339606,
+      "attempt": 0,
+      "prompt_ctx_window": 3
+    },
+    {
+      "asset": "bond",
+      "model": "gpt2-medium",
+      "ok": false,
+      "n_generated": 899,
+      "segs": 25,
+      "uniq_ratio": 0.719,
+      "discards": {
+        "empty": 0,
+        "div": 9,
+        "outlier": 3
+      },
+      "gen_tokens": 6920,
+      "gen_s": 989.2,
+      "gen_seed": 20417383,
+      "attempt": 1,
+      "prompt_ctx_window": 4
+    },
+    {
+      "asset": "bond",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1066,
+      "segs": 19,
+      "uniq_ratio": 0.706,
+      "discards": {
+        "empty": 0,
+        "div": 3,
+        "outlier": 0
+      },
+      "gen_tokens": 6080,
+      "gen_s": 879.1,
+      "gen_seed": 20495160,
+      "attempt": 2,
+      "prompt_ctx_window": 5
+    },
+    {
+      "asset": "bond",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1060,
+      "segs": 16,
+      "uniq_ratio": 0.606,
+      "discards": {
+        "empty": 0,
+        "div": 1,
+        "outlier": 0
+      },
+      "gen_tokens": 6400,
+      "gen_s": 931.1,
+      "gen_seed": 20339607,
+      "attempt": 0,
+      "prompt_ctx_window": 4
+    },
+    {
+      "asset": "fx",
+      "model": "gpt2-medium",
+      "ok": false,
+      "n_generated": 424,
+      "segs": 11,
+      "uniq_ratio": 0.224,
+      "discards": {
+        "empty": 0,
+        "div": 4,
+        "outlier": 2
+      },
+      "gen_tokens": 3800,
+      "gen_s": 539.2,
+      "gen_seed": 20340609,
+      "attempt": 0,
+      "prompt_ctx_window": 1
+    },
+    {
+      "asset": "fx",
+      "model": "gpt2-medium",
+      "ok": false,
+      "n_generated": 1068,
+      "segs": 24,
+      "uniq_ratio": 0.295,
+      "discards": {
+        "empty": 0,
+        "div": 6,
+        "outlier": 4
+      },
+      "gen_tokens": 8200,
+      "gen_s": 1159.2,
+      "gen_seed": 20418386,
+      "attempt": 1,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "fx",
+      "model": "gpt2-medium",
+      "ok": false,
+      "n_generated": 106,
+      "segs": 8,
+      "uniq_ratio": 0.84,
+      "discards": {
+        "empty": 0,
+        "div": 5,
+        "outlier": 1
+      },
+      "gen_tokens": 1080,
+      "gen_s": 158.4,
+      "gen_seed": 20496163,
+      "attempt": 2,
+      "prompt_ctx_window": 3
+    },
+    {
+      "asset": "fx",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1037,
+      "segs": 17,
+      "uniq_ratio": 0.687,
+      "discards": {
+        "empty": 0,
+        "div": 1,
+        "outlier": 1
+      },
+      "gen_tokens": 6620,
+      "gen_s": 953.2,
+      "gen_seed": 20340610,
+      "attempt": 0,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "fx",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1001,
+      "segs": 16,
+      "uniq_ratio": 0.71,
+      "discards": {
+        "empty": 0,
+        "div": 2,
+        "outlier": 0
+      },
+      "gen_tokens": 6400,
+      "gen_s": 924.6,
+      "gen_seed": 20340611,
+      "attempt": 0,
+      "prompt_ctx_window": 3
+    },
+    {
+      "asset": "fx",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1007,
+      "segs": 15,
+      "uniq_ratio": 0.815,
+      "discards": {
+        "empty": 0,
+        "div": 0,
+        "outlier": 1
+      },
+      "gen_tokens": 6000,
+      "gen_s": 865.3,
+      "gen_seed": 20340612,
+      "attempt": 0,
+      "prompt_ctx_window": 4
+    },
+    {
+      "asset": "gold",
+      "model": "gpt2-medium",
+      "ok": false,
+      "n_generated": 649,
+      "segs": 17,
+      "uniq_ratio": 0.829,
+      "discards": {
+        "empty": 0,
+        "div": 6,
+        "outlier": 2
+      },
+      "gen_tokens": 4440,
+      "gen_s": 643.4,
+      "gen_seed": 20341614,
+      "attempt": 0,
+      "prompt_ctx_window": 1
+    },
+    {
+      "asset": "gold",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1012,
+      "segs": 15,
+      "uniq_ratio": 0.85,
+      "discards": {
+        "empty": 0,
+        "div": 1,
+        "outlier": 0
+      },
+      "gen_tokens": 5640,
+      "gen_s": 815.5,
+      "gen_seed": 20419391,
+      "attempt": 1,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "gold",
+      "model": "gpt2-medium",
+      "ok": false,
+      "n_generated": 376,
+      "segs": 12,
+      "uniq_ratio": 0.66,
+      "discards": {
+        "empty": 0,
+        "div": 4,
+        "outlier": 2
+      },
+      "gen_tokens": 2980,
+      "gen_s": 431.7,
+      "gen_seed": 20341615,
+      "attempt": 0,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "gold",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1040,
+      "segs": 22,
+      "uniq_ratio": 0.851,
+      "discards": {
+        "empty": 0,
+        "div": 5,
+        "outlier": 2
+      },
+      "gen_tokens": 6700,
+      "gen_s": 965.5,
+      "gen_seed": 20419392,
+      "attempt": 1,
+      "prompt_ctx_window": 3
+    },
+    {
+      "asset": "gold",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1006,
+      "segs": 14,
+      "uniq_ratio": 0.634,
+      "discards": {
+        "empty": 0,
+        "div": 0,
+        "outlier": 0
+      },
+      "gen_tokens": 5600,
+      "gen_s": 811.3,
+      "gen_seed": 20341616,
+      "attempt": 0,
+      "prompt_ctx_window": 3
+    },
+    {
+      "asset": "gold",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1044,
+      "segs": 15,
+      "uniq_ratio": 0.671,
+      "discards": {
+        "empty": 0,
+        "div": 0,
+        "outlier": 0
+      },
+      "gen_tokens": 6000,
+      "gen_s": 871.6,
+      "gen_seed": 20341617,
+      "attempt": 0,
+      "prompt_ctx_window": 4
+    },
+    {
+      "asset": "copper",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1026,
+      "segs": 16,
+      "uniq_ratio": 0.689,
+      "discards": {
+        "empty": 0,
+        "div": 2,
+        "outlier": 0
+      },
+      "gen_tokens": 5640,
+      "gen_s": 812.5,
+      "gen_seed": 20342619,
+      "attempt": 0,
+      "prompt_ctx_window": 1
+    },
+    {
+      "asset": "copper",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1055,
+      "segs": 22,
+      "uniq_ratio": 0.609,
+      "discards": {
+        "empty": 0,
+        "div": 4,
+        "outlier": 2
+      },
+      "gen_tokens": 7380,
+      "gen_s": 1060.7,
+      "gen_seed": 20342620,
+      "attempt": 0,
+      "prompt_ctx_window": 2
+    },
+    {
+      "asset": "copper",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1051,
+      "segs": 19,
+      "uniq_ratio": 0.461,
+      "discards": {
+        "empty": 0,
+        "div": 4,
+        "outlier": 1
+      },
+      "gen_tokens": 6360,
+      "gen_s": 914.7,
+      "gen_seed": 20342621,
+      "attempt": 0,
+      "prompt_ctx_window": 3
+    },
+    {
+      "asset": "copper",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1029,
+      "segs": 16,
+      "uniq_ratio": 0.624,
+      "discards": {
+        "empty": 0,
+        "div": 1,
+        "outlier": 0
+      },
+      "gen_tokens": 5780,
+      "gen_s": 826.7,
+      "gen_seed": 20342622,
+      "attempt": 0,
+      "prompt_ctx_window": 4
+    },
+    {
+      "asset": "fx",
+      "model": "gpt2-medium",
+      "ok": true,
+      "n_generated": 1037,
+      "segs": 20,
+      "uniq_ratio": 0.581,
+      "discards": {
+        "empty": 0,
+        "div": 3,
+        "outlier": 2
+      },
+      "gen_tokens": 7440,
+      "gen_s": 1261.1,
+      "gen_seed": 28118309,
+      "attempt": 0,
+      "prompt_ctx_window": 1
+    }
+  ]
+}

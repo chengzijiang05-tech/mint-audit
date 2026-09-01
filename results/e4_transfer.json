@@ -1,0 +1,821 @@
+{
+ "experiment": "E4_cross_market_transfer",
+ "alpha": 0.05,
+ "k_orbit": 32,
+ "epochs": 250,
+ "seed": 20260820,
+ "quick": false,
+ "protocol": {
+  "layers": {
+   "CN": {
+    "test_n": 10,
+    "cal_n": 10
+   },
+   "US": {
+    "test_n": 10,
+    "cal_n": 10
+   },
+   "HK": {
+    "test_n": 20,
+    "cal_n": 8
+   }
+  },
+  "forge_seeds": "2000+wi*10+fi (R6 series)",
+  "train_span": {
+   "CN": {
+    "series": [
+     "equity"
+    ],
+    "end_day": 1700
+   },
+   "US": {
+    "series": [
+     "us_spy"
+    ],
+    "end_day": 1700
+   },
+   "HK": {
+    "series": [
+     "hk_hsi",
+     "hk_hscei"
+    ],
+    "end_day": 1550
+   }
+  },
+  "notes": [
+   "HK train span = pre-test history (deviation from E2's train<cal ordering; HK data too short; MINT paths do not use the cal layer)",
+   "HK cal layer (HSCEI 12-19) partially overlaps test in calendar within HSCEI (inherited R6 protocol; affects only S1 HK->HK threshold cell)",
+   "R6 classical reference numbers cited from archived r6_cross_market.json (same protocol)",
+   "delta estimated in encoder score space (1-D projection of invariant-law TV distance)"
+  ]
+ },
+ "matrix": {
+  "CN->CN": {
+   "n_clean": 10,
+   "n_forged": 50,
+   "S1": {
+    "threshold": 3.628,
+    "fpr": 0.0,
+    "fpr_ci": [
+     0.0,
+     0.2775
+    ],
+    "recall": {
+     "N1": 0.0,
+     "N2": 0.0,
+     "N3": 0.0,
+     "N4": 0.0,
+     "N5": 0.6
+    },
+    "macro_recall": 0.12
+   },
+   "S2": {
+    "fpr": 0.0,
+    "fpr_ci": [
+     0.0,
+     0.2775
+    ],
+    "certify_real": 0.1,
+    "recall_flag": {
+     "N1": {
+      "flag_recall": 0.0,
+      "not_certified": 0.9,
+      "abstain": 0.9
+     },
+     "N2": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N3": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N4": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N5": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     }
+    },
+    "macro_flag_recall": 0.0,
+    "macro_not_certified": 0.98,
+    "n_forged": 50
+   },
+   "delta": {
+    "tv8": 0.4688,
+    "auc": 0.9169,
+    "mean_gap": 1.648
+   },
+   "null_flag_rate": {
+    "rate": 0.0,
+    "ci": [
+     0.0,
+     0.1611
+    ],
+    "n": 20
+   }
+  },
+  "CN->US": {
+   "n_clean": 10,
+   "n_forged": 50,
+   "S1": {
+    "threshold": 3.219,
+    "fpr": 0.0,
+    "fpr_ci": [
+     0.0,
+     0.2775
+    ],
+    "recall": {
+     "N1": 0.0,
+     "N2": 0.1,
+     "N3": 0.0,
+     "N4": 0.0,
+     "N5": 1.0
+    },
+    "macro_recall": 0.22
+   },
+   "S2": {
+    "fpr": 0.0,
+    "fpr_ci": [
+     0.0,
+     0.2775
+    ],
+    "certify_real": 0.3,
+    "recall_flag": {
+     "N1": {
+      "flag_recall": 0.0,
+      "not_certified": 0.6,
+      "abstain": 0.6
+     },
+     "N2": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N3": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N4": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N5": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     }
+    },
+    "macro_flag_recall": 0.0,
+    "macro_not_certified": 0.92,
+    "n_forged": 50
+   },
+   "delta": {
+    "tv8": 0.7625,
+    "auc": 0.9559,
+    "mean_gap": 3.568
+   },
+   "null_flag_rate": {
+    "rate": 0.0,
+    "ci": [
+     0.0,
+     0.1611
+    ],
+    "n": 20
+   }
+  },
+  "CN->HK": {
+   "n_clean": 20,
+   "n_forged": 100,
+   "S1": {
+    "threshold": 3.541,
+    "fpr": 0.15,
+    "fpr_ci": [
+     0.0524,
+     0.3604
+    ],
+    "recall": {
+     "N1": 0.25,
+     "N2": 0.45,
+     "N3": 0.0,
+     "N4": 0.0,
+     "N5": 1.0
+    },
+    "macro_recall": 0.34
+   },
+   "S2": {
+    "fpr": 0.0,
+    "fpr_ci": [
+     0.0,
+     0.1611
+    ],
+    "certify_real": 0.0,
+    "recall_flag": {
+     "N1": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N2": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N3": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N4": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N5": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     }
+    },
+    "macro_flag_recall": 0.0,
+    "macro_not_certified": 1.0,
+    "n_forged": 100
+   },
+   "delta": {
+    "tv8": 0.4969,
+    "auc": 0.8623,
+    "mean_gap": 0.189
+   },
+   "null_flag_rate": {
+    "rate": 0.0,
+    "ci": [
+     0.0,
+     0.0876
+    ],
+    "n": 40
+   }
+  },
+  "US->CN": {
+   "n_clean": 10,
+   "n_forged": 50,
+   "S1": {
+    "threshold": 3.199,
+    "fpr": 0.0,
+    "fpr_ci": [
+     0.0,
+     0.2775
+    ],
+    "recall": {
+     "N1": 0.0,
+     "N2": 0.0,
+     "N3": 0.0,
+     "N4": 0.0,
+     "N5": 0.2
+    },
+    "macro_recall": 0.04
+   },
+   "S2": {
+    "fpr": 0.0,
+    "fpr_ci": [
+     0.0,
+     0.2775
+    ],
+    "certify_real": 0.0,
+    "recall_flag": {
+     "N1": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N2": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N3": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N4": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N5": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     }
+    },
+    "macro_flag_recall": 0.0,
+    "macro_not_certified": 1.0,
+    "n_forged": 50
+   },
+   "delta": {
+    "tv8": 0.1781,
+    "auc": 0.8688,
+    "mean_gap": 0.209
+   },
+   "null_flag_rate": {
+    "rate": 0.0,
+    "ci": [
+     0.0,
+     0.1611
+    ],
+    "n": 20
+   }
+  },
+  "US->US": {
+   "n_clean": 10,
+   "n_forged": 50,
+   "S1": {
+    "threshold": -2.191,
+    "fpr": 0.0,
+    "fpr_ci": [
+     0.0,
+     0.2775
+    ],
+    "recall": {
+     "N1": 0.0,
+     "N2": 1.0,
+     "N3": 1.0,
+     "N4": 1.0,
+     "N5": 1.0
+    },
+    "macro_recall": 0.8
+   },
+   "S2": {
+    "fpr": 0.0,
+    "fpr_ci": [
+     0.0,
+     0.2775
+    ],
+    "certify_real": 1.0,
+    "recall_flag": {
+     "N1": {
+      "flag_recall": 0.0,
+      "not_certified": 0.0,
+      "abstain": 0.0
+     },
+     "N2": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N3": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N4": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N5": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     }
+    },
+    "macro_flag_recall": 0.0,
+    "macro_not_certified": 0.8,
+    "n_forged": 50
+   },
+   "delta": {
+    "tv8": 1.0,
+    "auc": 1.0,
+    "mean_gap": 6.563
+   },
+   "null_flag_rate": {
+    "rate": 0.0,
+    "ci": [
+     0.0,
+     0.1611
+    ],
+    "n": 20
+   }
+  },
+  "US->HK": {
+   "n_clean": 20,
+   "n_forged": 100,
+   "S1": {
+    "threshold": 3.154,
+    "fpr": 0.05,
+    "fpr_ci": [
+     0.0089,
+     0.2361
+    ],
+    "recall": {
+     "N1": 0.1,
+     "N2": 0.6,
+     "N3": 1.0,
+     "N4": 0.0,
+     "N5": 0.9
+    },
+    "macro_recall": 0.52
+   },
+   "S2": {
+    "fpr": 0.0,
+    "fpr_ci": [
+     0.0,
+     0.1611
+    ],
+    "certify_real": 0.0,
+    "recall_flag": {
+     "N1": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N2": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N3": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N4": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N5": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     }
+    },
+    "macro_flag_recall": 0.0,
+    "macro_not_certified": 1.0,
+    "n_forged": 100
+   },
+   "delta": {
+    "tv8": 0.5453,
+    "auc": 0.9725,
+    "mean_gap": 0.184
+   },
+   "null_flag_rate": {
+    "rate": 0.0,
+    "ci": [
+     0.0,
+     0.0876
+    ],
+    "n": 40
+   }
+  },
+  "HK->CN": {
+   "n_clean": 10,
+   "n_forged": 50,
+   "S1": {
+    "threshold": 3.456,
+    "fpr": 0.0,
+    "fpr_ci": [
+     0.0,
+     0.2775
+    ],
+    "recall": {
+     "N1": 0.0,
+     "N2": 0.1,
+     "N3": 0.0,
+     "N4": 0.0,
+     "N5": 0.9
+    },
+    "macro_recall": 0.2
+   },
+   "S2": {
+    "fpr": 0.0,
+    "fpr_ci": [
+     0.0,
+     0.2775
+    ],
+    "certify_real": 0.0,
+    "recall_flag": {
+     "N1": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N2": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N3": {
+      "flag_recall": 0.0,
+      "not_certified": 0.9,
+      "abstain": 0.9
+     },
+     "N4": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N5": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     }
+    },
+    "macro_flag_recall": 0.0,
+    "macro_not_certified": 0.98,
+    "n_forged": 50
+   },
+   "delta": {
+    "tv8": 0.5563,
+    "auc": 0.9272,
+    "mean_gap": 2.079
+   },
+   "null_flag_rate": {
+    "rate": 0.0,
+    "ci": [
+     0.0,
+     0.1611
+    ],
+    "n": 20
+   }
+  },
+  "HK->US": {
+   "n_clean": 10,
+   "n_forged": 50,
+   "S1": {
+    "threshold": -0.983,
+    "fpr": 0.0,
+    "fpr_ci": [
+     0.0,
+     0.2775
+    ],
+    "recall": {
+     "N1": 0.0,
+     "N2": 0.9,
+     "N3": 0.1,
+     "N4": 1.0,
+     "N5": 1.0
+    },
+    "macro_recall": 0.6
+   },
+   "S2": {
+    "fpr": 0.0,
+    "fpr_ci": [
+     0.0,
+     0.2775
+    ],
+    "certify_real": 0.9,
+    "recall_flag": {
+     "N1": {
+      "flag_recall": 0.0,
+      "not_certified": 0.1,
+      "abstain": 0.1
+     },
+     "N2": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N3": {
+      "flag_recall": 0.0,
+      "not_certified": 0.5,
+      "abstain": 0.5
+     },
+     "N4": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N5": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     }
+    },
+    "macro_flag_recall": 0.0,
+    "macro_not_certified": 0.72,
+    "n_forged": 50
+   },
+   "delta": {
+    "tv8": 1.0,
+    "auc": 1.0,
+    "mean_gap": 6.248
+   },
+   "null_flag_rate": {
+    "rate": 0.0,
+    "ci": [
+     0.0,
+     0.1611
+    ],
+    "n": 20
+   }
+  },
+  "HK->HK": {
+   "n_clean": 20,
+   "n_forged": 100,
+   "S1": {
+    "threshold": 1.517,
+    "fpr": 0.9,
+    "fpr_ci": [
+     0.699,
+     0.9721
+    ],
+    "recall": {
+     "N1": 0.9,
+     "N2": 1.0,
+     "N3": 1.0,
+     "N4": 0.3,
+     "N5": 1.0
+    },
+    "macro_recall": 0.84
+   },
+   "S2": {
+    "fpr": 0.0,
+    "fpr_ci": [
+     0.0,
+     0.1611
+    ],
+    "certify_real": 0.05,
+    "recall_flag": {
+     "N1": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N2": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N3": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N4": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     },
+     "N5": {
+      "flag_recall": 0.0,
+      "not_certified": 1.0,
+      "abstain": 1.0
+     }
+    },
+    "macro_flag_recall": 0.0,
+    "macro_not_certified": 1.0,
+    "n_forged": 100
+   },
+   "delta": {
+    "tv8": 0.4969,
+    "auc": 0.969,
+    "mean_gap": 0.768
+   },
+   "null_flag_rate": {
+    "rate": 0.0,
+    "ci": [
+     0.0,
+     0.0876
+    ],
+    "n": 40
+   }
+  }
+ },
+ "ensemble_cn_five": {
+  "equity->US": {
+   "fpr": 0.0,
+   "certify_real": 0.4,
+   "macro_flag_recall": 0.0,
+   "null": 0.0,
+   "delta_tv": 0.7594
+  },
+  "equity->HK": {
+   "fpr": 0.0,
+   "certify_real": 0.0,
+   "macro_flag_recall": 0.0,
+   "null": 0.0,
+   "delta_tv": 0.5234
+  },
+  "bond->US": {
+   "fpr": 0.0,
+   "certify_real": 0.0,
+   "macro_flag_recall": 0.0,
+   "null": 0.0,
+   "delta_tv": 0.7406
+  },
+  "bond->HK": {
+   "fpr": 0.0,
+   "certify_real": 0.0,
+   "macro_flag_recall": 0.0,
+   "null": 0.0,
+   "delta_tv": 0.6875
+  },
+  "fx->US": {
+   "fpr": 0.0,
+   "certify_real": 0.8,
+   "macro_flag_recall": 0.0,
+   "null": 0.0,
+   "delta_tv": 0.8781
+  },
+  "fx->HK": {
+   "fpr": 0.0,
+   "certify_real": 0.0,
+   "macro_flag_recall": 0.0,
+   "null": 0.0,
+   "delta_tv": 0.6797
+  },
+  "gold->US": {
+   "fpr": 0.0,
+   "certify_real": 0.0,
+   "macro_flag_recall": 0.0,
+   "null": 0.0,
+   "delta_tv": 0.5312
+  },
+  "gold->HK": {
+   "fpr": 0.0,
+   "certify_real": 0.0,
+   "macro_flag_recall": 0.0,
+   "null": 0.0,
+   "delta_tv": 0.4719
+  },
+  "copper->US": {
+   "fpr": 0.0,
+   "certify_real": 0.2,
+   "macro_flag_recall": 0.0,
+   "null": 0.0,
+   "delta_tv": 0.7625
+  },
+  "copper->HK": {
+   "fpr": 0.0,
+   "certify_real": 0.0,
+   "macro_flag_recall": 0.0,
+   "null": 0.0,
+   "delta_tv": 0.6188
+  }
+ },
+ "r6_classical_reference": {
+  "CN->CN": {
+   "fpr": 0.1,
+   "recall": 0.66
+  },
+  "CN->US": {
+   "fpr": 0.8,
+   "recall": 0.92
+  },
+  "CN->HK": {
+   "fpr": 0.75,
+   "recall": 0.91
+  },
+  "US->CN": {
+   "fpr": 0.0,
+   "recall": 0.46
+  },
+  "US->US": {
+   "fpr": 0.0,
+   "recall": 0.44
+  },
+  "US->HK": {
+   "fpr": 0.0,
+   "recall": 0.41
+  },
+  "HK->CN": {
+   "fpr": 0.2,
+   "recall": 0.62
+  },
+  "HK->US": {
+   "fpr": 0.6,
+   "recall": 0.76
+  },
+  "HK->HK": {
+   "fpr": 0.15,
+   "recall": 0.57
+  }
+ },
+ "verdict": {
+  "H4_transfer_fpr": {
+   "CN->US": 0.0,
+   "CN->HK": 0.0
+  },
+  "H4_pass": true,
+  "H4_fail": false,
+  "T4i_null_validity_all_cells": true,
+  "T4ii_spearman_delta_certify": {
+   "rho": 0.645,
+   "p": 0.0606
+  },
+  "T4ii_spearman_delta_flag_recall": {
+   "rho": NaN,
+   "p": NaN
+  }
+ },
+ "elapsed_s": 2132.5
+}

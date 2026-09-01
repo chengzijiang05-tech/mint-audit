@@ -1,0 +1,1622 @@
+{
+ "protocol": {
+  "A0_seed": 20260820,
+  "epochs": 250,
+  "K_eval": 32,
+  "alpha": 0.05,
+  "e_value_seed_base": "950000+ai*10000 (+500 real, +700 fam, +900 n7c)"
+ },
+ "n_paths": 168,
+ "n_certified": 0,
+ "n_units": 40,
+ "unit_cert": {
+  "N7a|bond|gpt2-medium": 0,
+  "N7a|bond|qwen2.5-0.5b-instruct": 0,
+  "N7a|copper|gpt2-medium": 0,
+  "N7a|copper|qwen2.5-0.5b-instruct": 0,
+  "N7a|equity|gpt2-medium": 0,
+  "N7a|equity|qwen2.5-0.5b-instruct": 0,
+  "N7a|fx|gpt2-medium": 0,
+  "N7a|fx|qwen2.5-0.5b-instruct": 0,
+  "N7a|gold|gpt2-medium": 0,
+  "N7a|gold|qwen2.5-0.5b-instruct": 0,
+  "N7b|bond|quantgan": 0,
+  "N7b|copper|quantgan": 0,
+  "N7b|equity|quantgan": 0,
+  "N7b|fx|quantgan": 0,
+  "N7b|gold|quantgan": 0,
+  "N7c|bond|chronos-t5-base": 0,
+  "N7c|copper|chronos-t5-base": 0,
+  "N7c|equity|chronos-t5-base": 0,
+  "N7c|fx|chronos-t5-base": 0,
+  "N7c|gold|chronos-t5-base": 0,
+  "N8|bond|egarch_boot": 0,
+  "N8|bond|egarch_skewt": 0,
+  "N8|bond|gjr_boot": 0,
+  "N8|bond|gjr_skewt": 0,
+  "N8|copper|egarch_boot": 0,
+  "N8|copper|egarch_skewt": 0,
+  "N8|copper|gjr_boot": 0,
+  "N8|copper|gjr_skewt": 0,
+  "N8|equity|egarch_boot": 0,
+  "N8|equity|egarch_skewt": 0,
+  "N8|equity|gjr_boot": 0,
+  "N8|equity|gjr_skewt": 0,
+  "N8|fx|egarch_boot": 0,
+  "N8|fx|egarch_skewt": 0,
+  "N8|fx|gjr_boot": 0,
+  "N8|fx|gjr_skewt": 0,
+  "N8|gold|egarch_boot": 0,
+  "N8|gold|egarch_skewt": 0,
+  "N8|gold|gjr_boot": 0,
+  "N8|gold|gjr_skewt": 0
+ },
+ "asset_cert": {
+  "equity": 0,
+  "bond": 0,
+  "fx": 0,
+  "gold": 0,
+  "copper": 0
+ },
+ "max_w_paths": 19.44946137799885,
+ "threshold": 20.0,
+ "per_asset_real": {
+  "equity": {
+   "n_test": 8,
+   "real_cert": 1,
+   "real_max_w": 24.652854003614422,
+   "cal_q95_w": 1.1698487219156803
+  },
+  "bond": {
+   "n_test": 8,
+   "real_cert": 0,
+   "real_max_w": 1.1559018576196058,
+   "cal_q95_w": 3.3039783758484083
+  },
+  "fx": {
+   "n_test": 6,
+   "real_cert": 0,
+   "real_max_w": 4.8024842697316545,
+   "cal_q95_w": 13.464410468942074
+  },
+  "gold": {
+   "n_test": 3,
+   "real_cert": 0,
+   "real_max_w": 7.6339625911411435,
+   "cal_q95_w": 1.3093605860571473
+  },
+  "copper": {
+   "n_test": 3,
+   "real_cert": 0,
+   "real_max_w": 2.62784665235992,
+   "cal_q95_w": 1.249318357440413
+  }
+ },
+ "bounds": {
+  "wilson_path_level": 0.01767369505084618,
+  "cluster_unit_cp95": 0.0721575245055146,
+  "cluster_asset_cp95": 0.4507197283469412,
+  "n_units_by_family": {
+   "N7a": 10,
+   "N7b": 5,
+   "N7c": 5,
+   "N8": 20
+  }
+ },
+ "paths": [
+  {
+   "asset": "equity",
+   "family": "N7a",
+   "path_key": "gpt2-medium:0",
+   "unit": "N7a|equity|gpt2-medium",
+   "W": 1.0972938286453835,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N7a",
+   "path_key": "gpt2-medium:1",
+   "unit": "N7a|equity|gpt2-medium",
+   "W": 3.6674111056421106,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N7a",
+   "path_key": "gpt2-medium:2",
+   "unit": "N7a|equity|gpt2-medium",
+   "W": 1.096161026987359,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N7a",
+   "path_key": "gpt2-medium:3",
+   "unit": "N7a|equity|gpt2-medium",
+   "W": 1.5798352222091727,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N7a",
+   "path_key": "gpt2-medium:4",
+   "unit": "N7a|equity|gpt2-medium",
+   "W": 2.94676112335032,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:0",
+   "unit": "N7a|equity|qwen2.5-0.5b-instruct",
+   "W": 1.0220444418368646,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:1",
+   "unit": "N7a|equity|qwen2.5-0.5b-instruct",
+   "W": 2.975301845586591,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:3",
+   "unit": "N7a|equity|qwen2.5-0.5b-instruct",
+   "W": 3.1313981108548723,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:4",
+   "unit": "N7a|equity|qwen2.5-0.5b-instruct",
+   "W": 0.15426784876890992,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:2",
+   "unit": "N7a|equity|qwen2.5-0.5b-instruct",
+   "W": 4.565139676977548,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N7b",
+   "path_key": "quantgan:0",
+   "unit": "N7b|equity|quantgan",
+   "W": 0.9901249568830317,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N7b",
+   "path_key": "quantgan:1",
+   "unit": "N7b|equity|quantgan",
+   "W": 0.9946262148685472,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N7b",
+   "path_key": "quantgan:2",
+   "unit": "N7b|equity|quantgan",
+   "W": 0.9516544399896818,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N7b",
+   "path_key": "quantgan:3",
+   "unit": "N7b|equity|quantgan",
+   "W": 0.9815289362971775,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N7c",
+   "path_key": "chronos-t5-base:0",
+   "unit": "N7c|equity|chronos-t5-base",
+   "W": 1.1992503365501879,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N7c",
+   "path_key": "chronos-t5-base:1",
+   "unit": "N7c|equity|chronos-t5-base",
+   "W": 2.0102156991840467,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N7c",
+   "path_key": "chronos-t5-base:2",
+   "unit": "N7c|equity|chronos-t5-base",
+   "W": 1.641936020753801,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N7c",
+   "path_key": "chronos-t5-base:3",
+   "unit": "N7c|equity|chronos-t5-base",
+   "W": 1.5678533731570248,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N7c",
+   "path_key": "chronos-t5-base:4",
+   "unit": "N7c|equity|chronos-t5-base",
+   "W": 1.831888925812985,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N8",
+   "path_key": "gjr_skewt:0",
+   "unit": "N8|equity|gjr_skewt",
+   "W": 1.0869571544524919,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N8",
+   "path_key": "gjr_skewt:1",
+   "unit": "N8|equity|gjr_skewt",
+   "W": 1.0014458837510318,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N8",
+   "path_key": "gjr_skewt:2",
+   "unit": "N8|equity|gjr_skewt",
+   "W": 1.0091474570295222,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N8",
+   "path_key": "gjr_skewt:3",
+   "unit": "N8|equity|gjr_skewt",
+   "W": 1.194009375851202,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N8",
+   "path_key": "gjr_boot:0",
+   "unit": "N8|equity|gjr_boot",
+   "W": 1.0312528885910044,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N8",
+   "path_key": "gjr_boot:1",
+   "unit": "N8|equity|gjr_boot",
+   "W": 1.1082400795231155,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N8",
+   "path_key": "gjr_boot:2",
+   "unit": "N8|equity|gjr_boot",
+   "W": 1.5989751348366628,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N8",
+   "path_key": "gjr_boot:3",
+   "unit": "N8|equity|gjr_boot",
+   "W": 1.1174753081331545,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N8",
+   "path_key": "egarch_skewt:0",
+   "unit": "N8|equity|egarch_skewt",
+   "W": 14.661226447751794,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N8",
+   "path_key": "egarch_skewt:1",
+   "unit": "N8|equity|egarch_skewt",
+   "W": 7.636965968298818,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N8",
+   "path_key": "egarch_skewt:2",
+   "unit": "N8|equity|egarch_skewt",
+   "W": 1.1441043959288972,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N8",
+   "path_key": "egarch_skewt:3",
+   "unit": "N8|equity|egarch_skewt",
+   "W": 2.585769255726306,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N8",
+   "path_key": "egarch_boot:0",
+   "unit": "N8|equity|egarch_boot",
+   "W": 3.3966583370845673,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N8",
+   "path_key": "egarch_boot:1",
+   "unit": "N8|equity|egarch_boot",
+   "W": 8.95068250269407,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N8",
+   "path_key": "egarch_boot:2",
+   "unit": "N8|equity|egarch_boot",
+   "W": 1.665733257327797,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "family": "N8",
+   "path_key": "egarch_boot:3",
+   "unit": "N8|equity|egarch_boot",
+   "W": 1.0700767546748762,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N7a",
+   "path_key": "gpt2-medium:0",
+   "unit": "N7a|bond|gpt2-medium",
+   "W": 7.324599351218698,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N7a",
+   "path_key": "gpt2-medium:1",
+   "unit": "N7a|bond|gpt2-medium",
+   "W": 1.25817544024332,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N7a",
+   "path_key": "gpt2-medium:2",
+   "unit": "N7a|bond|gpt2-medium",
+   "W": 19.44946137799885,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N7a",
+   "path_key": "gpt2-medium:3",
+   "unit": "N7a|bond|gpt2-medium",
+   "W": 5.146078450021967,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N7a",
+   "path_key": "gpt2-medium:4",
+   "unit": "N7a|bond|gpt2-medium",
+   "W": 0.9787489011729881,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:0",
+   "unit": "N7a|bond|qwen2.5-0.5b-instruct",
+   "W": 2.221876752338709,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:2",
+   "unit": "N7a|bond|qwen2.5-0.5b-instruct",
+   "W": 1.3013610963441136,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:3",
+   "unit": "N7a|bond|qwen2.5-0.5b-instruct",
+   "W": 0.4148636674541253,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:4",
+   "unit": "N7a|bond|qwen2.5-0.5b-instruct",
+   "W": 4.052220248268252,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:1",
+   "unit": "N7a|bond|qwen2.5-0.5b-instruct",
+   "W": 0.35535514890009395,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N7b",
+   "path_key": "quantgan:0",
+   "unit": "N7b|bond|quantgan",
+   "W": 0.9871308967358928,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N7b",
+   "path_key": "quantgan:1",
+   "unit": "N7b|bond|quantgan",
+   "W": 0.997310400118039,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N7b",
+   "path_key": "quantgan:2",
+   "unit": "N7b|bond|quantgan",
+   "W": 0.9962494491673533,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N7b",
+   "path_key": "quantgan:3",
+   "unit": "N7b|bond|quantgan",
+   "W": 0.9800348712327454,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N7c",
+   "path_key": "chronos-t5-base:3",
+   "unit": "N7c|bond|chronos-t5-base",
+   "W": 1.6022506247444799,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N7c",
+   "path_key": "chronos-t5-base:4",
+   "unit": "N7c|bond|chronos-t5-base",
+   "W": 2.0491109187186,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N8",
+   "path_key": "gjr_skewt:0",
+   "unit": "N8|bond|gjr_skewt",
+   "W": 1.411348453685255,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N8",
+   "path_key": "gjr_skewt:1",
+   "unit": "N8|bond|gjr_skewt",
+   "W": 3.2610671243561535,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N8",
+   "path_key": "gjr_skewt:2",
+   "unit": "N8|bond|gjr_skewt",
+   "W": 3.0366529750522515,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N8",
+   "path_key": "gjr_skewt:3",
+   "unit": "N8|bond|gjr_skewt",
+   "W": 1.3088167090837008,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N8",
+   "path_key": "gjr_boot:0",
+   "unit": "N8|bond|gjr_boot",
+   "W": 1.010999846872516,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N8",
+   "path_key": "gjr_boot:1",
+   "unit": "N8|bond|gjr_boot",
+   "W": 1.0406132002735773,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N8",
+   "path_key": "gjr_boot:2",
+   "unit": "N8|bond|gjr_boot",
+   "W": 1.107794049088655,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N8",
+   "path_key": "gjr_boot:3",
+   "unit": "N8|bond|gjr_boot",
+   "W": 1.2537759862073092,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N8",
+   "path_key": "egarch_skewt:0",
+   "unit": "N8|bond|egarch_skewt",
+   "W": 1.0535596125860114,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N8",
+   "path_key": "egarch_skewt:1",
+   "unit": "N8|bond|egarch_skewt",
+   "W": 1.1417774358720885,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N8",
+   "path_key": "egarch_skewt:2",
+   "unit": "N8|bond|egarch_skewt",
+   "W": 0.2634473221937995,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N8",
+   "path_key": "egarch_skewt:3",
+   "unit": "N8|bond|egarch_skewt",
+   "W": 1.1221451504371192,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N8",
+   "path_key": "egarch_boot:0",
+   "unit": "N8|bond|egarch_boot",
+   "W": 0.9308679669550969,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N8",
+   "path_key": "egarch_boot:1",
+   "unit": "N8|bond|egarch_boot",
+   "W": 1.0103305096829402,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N8",
+   "path_key": "egarch_boot:2",
+   "unit": "N8|bond|egarch_boot",
+   "W": 1.3838444035882957,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "family": "N8",
+   "path_key": "egarch_boot:3",
+   "unit": "N8|bond|egarch_boot",
+   "W": 1.1508911340692038,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N7a",
+   "path_key": "gpt2-medium:0",
+   "unit": "N7a|fx|gpt2-medium",
+   "W": 5.634434327093453,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N7a",
+   "path_key": "gpt2-medium:2",
+   "unit": "N7a|fx|gpt2-medium",
+   "W": 12.747830679378836,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N7a",
+   "path_key": "gpt2-medium:3",
+   "unit": "N7a|fx|gpt2-medium",
+   "W": 6.336698433799798,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N7a",
+   "path_key": "gpt2-medium:4",
+   "unit": "N7a|fx|gpt2-medium",
+   "W": 1.6187241043152172,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N7a",
+   "path_key": "gpt2-medium:1",
+   "unit": "N7a|fx|gpt2-medium",
+   "W": 0.5077909628940355,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:0",
+   "unit": "N7a|fx|qwen2.5-0.5b-instruct",
+   "W": 1.281757657497945,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:1",
+   "unit": "N7a|fx|qwen2.5-0.5b-instruct",
+   "W": 5.598414464965101,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:2",
+   "unit": "N7a|fx|qwen2.5-0.5b-instruct",
+   "W": 5.839762067582218,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:3",
+   "unit": "N7a|fx|qwen2.5-0.5b-instruct",
+   "W": 1.0146530592531562,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:4",
+   "unit": "N7a|fx|qwen2.5-0.5b-instruct",
+   "W": 0.0681605619488379,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N7b",
+   "path_key": "quantgan:0",
+   "unit": "N7b|fx|quantgan",
+   "W": 1.0284833792666825,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N7b",
+   "path_key": "quantgan:1",
+   "unit": "N7b|fx|quantgan",
+   "W": 1.0029666298199147,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N7b",
+   "path_key": "quantgan:2",
+   "unit": "N7b|fx|quantgan",
+   "W": 0.9577802344077654,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N7b",
+   "path_key": "quantgan:3",
+   "unit": "N7b|fx|quantgan",
+   "W": 1.0188643127361536,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N7c",
+   "path_key": "chronos-t5-base:3",
+   "unit": "N7c|fx|chronos-t5-base",
+   "W": 1.2843693979316024,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N8",
+   "path_key": "gjr_skewt:0",
+   "unit": "N8|fx|gjr_skewt",
+   "W": 1.035347318442851,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N8",
+   "path_key": "gjr_skewt:1",
+   "unit": "N8|fx|gjr_skewt",
+   "W": 1.0118357479980384,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N8",
+   "path_key": "gjr_skewt:2",
+   "unit": "N8|fx|gjr_skewt",
+   "W": 1.0357860888645076,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N8",
+   "path_key": "gjr_skewt:3",
+   "unit": "N8|fx|gjr_skewt",
+   "W": 0.9617786437107488,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N8",
+   "path_key": "gjr_boot:0",
+   "unit": "N8|fx|gjr_boot",
+   "W": 1.022015979857489,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N8",
+   "path_key": "gjr_boot:1",
+   "unit": "N8|fx|gjr_boot",
+   "W": 1.0340931116786822,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N8",
+   "path_key": "gjr_boot:2",
+   "unit": "N8|fx|gjr_boot",
+   "W": 0.989493795827467,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N8",
+   "path_key": "gjr_boot:3",
+   "unit": "N8|fx|gjr_boot",
+   "W": 1.0382269570483287,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N8",
+   "path_key": "egarch_skewt:0",
+   "unit": "N8|fx|egarch_skewt",
+   "W": 0.9809765154860869,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N8",
+   "path_key": "egarch_skewt:1",
+   "unit": "N8|fx|egarch_skewt",
+   "W": 0.9851856158513169,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N8",
+   "path_key": "egarch_skewt:2",
+   "unit": "N8|fx|egarch_skewt",
+   "W": 1.041473460480139,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N8",
+   "path_key": "egarch_skewt:3",
+   "unit": "N8|fx|egarch_skewt",
+   "W": 0.9438456817231193,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N8",
+   "path_key": "egarch_boot:0",
+   "unit": "N8|fx|egarch_boot",
+   "W": 0.9814933877340531,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N8",
+   "path_key": "egarch_boot:1",
+   "unit": "N8|fx|egarch_boot",
+   "W": 0.985663144317574,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N8",
+   "path_key": "egarch_boot:2",
+   "unit": "N8|fx|egarch_boot",
+   "W": 0.9732471448553541,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "family": "N8",
+   "path_key": "egarch_boot:3",
+   "unit": "N8|fx|egarch_boot",
+   "W": 1.0101896108555137,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7a",
+   "path_key": "gpt2-medium:0",
+   "unit": "N7a|gold|gpt2-medium",
+   "W": 1.3596472731636373,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7a",
+   "path_key": "gpt2-medium:1",
+   "unit": "N7a|gold|gpt2-medium",
+   "W": 1.3036310733644523,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7a",
+   "path_key": "gpt2-medium:2",
+   "unit": "N7a|gold|gpt2-medium",
+   "W": 0.9873187443519063,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7a",
+   "path_key": "gpt2-medium:3",
+   "unit": "N7a|gold|gpt2-medium",
+   "W": 1.4206916772928933,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7a",
+   "path_key": "gpt2-medium:4",
+   "unit": "N7a|gold|gpt2-medium",
+   "W": 1.2153279466448863,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:0",
+   "unit": "N7a|gold|qwen2.5-0.5b-instruct",
+   "W": 1.804627175724677,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:2",
+   "unit": "N7a|gold|qwen2.5-0.5b-instruct",
+   "W": 3.363806904166392,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:3",
+   "unit": "N7a|gold|qwen2.5-0.5b-instruct",
+   "W": 3.364644729775029,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:1",
+   "unit": "N7a|gold|qwen2.5-0.5b-instruct",
+   "W": 1.121408680533669,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:4",
+   "unit": "N7a|gold|qwen2.5-0.5b-instruct",
+   "W": 1.556608913830349,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7b",
+   "path_key": "quantgan:0",
+   "unit": "N7b|gold|quantgan",
+   "W": 1.0608391625300684,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7b",
+   "path_key": "quantgan:1",
+   "unit": "N7b|gold|quantgan",
+   "W": 0.9233667410922499,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7b",
+   "path_key": "quantgan:2",
+   "unit": "N7b|gold|quantgan",
+   "W": 1.1537146842357744,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7b",
+   "path_key": "quantgan:3",
+   "unit": "N7b|gold|quantgan",
+   "W": 0.9990574593489915,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7c",
+   "path_key": "chronos-t5-base:0",
+   "unit": "N7c|gold|chronos-t5-base",
+   "W": 1.8200044520627014,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7c",
+   "path_key": "chronos-t5-base:1",
+   "unit": "N7c|gold|chronos-t5-base",
+   "W": 1.6527911231042087,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7c",
+   "path_key": "chronos-t5-base:2",
+   "unit": "N7c|gold|chronos-t5-base",
+   "W": 1.382768595975568,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7c",
+   "path_key": "chronos-t5-base:3",
+   "unit": "N7c|gold|chronos-t5-base",
+   "W": 1.2341328472815285,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N7c",
+   "path_key": "chronos-t5-base:4",
+   "unit": "N7c|gold|chronos-t5-base",
+   "W": 2.2944453153071294,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N8",
+   "path_key": "gjr_skewt:0",
+   "unit": "N8|gold|gjr_skewt",
+   "W": 0.9918438360030667,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N8",
+   "path_key": "gjr_skewt:1",
+   "unit": "N8|gold|gjr_skewt",
+   "W": 0.9763950024379543,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N8",
+   "path_key": "gjr_skewt:2",
+   "unit": "N8|gold|gjr_skewt",
+   "W": 1.0392368427437928,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N8",
+   "path_key": "gjr_skewt:3",
+   "unit": "N8|gold|gjr_skewt",
+   "W": 1.1954687642198563,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N8",
+   "path_key": "gjr_boot:0",
+   "unit": "N8|gold|gjr_boot",
+   "W": 0.9901838167938471,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N8",
+   "path_key": "gjr_boot:1",
+   "unit": "N8|gold|gjr_boot",
+   "W": 1.0669206312072697,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N8",
+   "path_key": "gjr_boot:2",
+   "unit": "N8|gold|gjr_boot",
+   "W": 1.1914583809778883,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N8",
+   "path_key": "gjr_boot:3",
+   "unit": "N8|gold|gjr_boot",
+   "W": 1.2368157613173727,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N8",
+   "path_key": "egarch_skewt:0",
+   "unit": "N8|gold|egarch_skewt",
+   "W": 1.0094303790337356,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N8",
+   "path_key": "egarch_skewt:1",
+   "unit": "N8|gold|egarch_skewt",
+   "W": 1.0647650728904545,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N8",
+   "path_key": "egarch_skewt:2",
+   "unit": "N8|gold|egarch_skewt",
+   "W": 1.014081064535186,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N8",
+   "path_key": "egarch_skewt:3",
+   "unit": "N8|gold|egarch_skewt",
+   "W": 1.0429345604545106,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N8",
+   "path_key": "egarch_boot:0",
+   "unit": "N8|gold|egarch_boot",
+   "W": 1.2681305817139752,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N8",
+   "path_key": "egarch_boot:1",
+   "unit": "N8|gold|egarch_boot",
+   "W": 1.0950912979991934,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N8",
+   "path_key": "egarch_boot:2",
+   "unit": "N8|gold|egarch_boot",
+   "W": 0.9735382486596165,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "family": "N8",
+   "path_key": "egarch_boot:3",
+   "unit": "N8|gold|egarch_boot",
+   "W": 1.1793687611107226,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7a",
+   "path_key": "gpt2-medium:0",
+   "unit": "N7a|copper|gpt2-medium",
+   "W": 2.4690011731498496,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7a",
+   "path_key": "gpt2-medium:1",
+   "unit": "N7a|copper|gpt2-medium",
+   "W": 0.9702505836340773,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7a",
+   "path_key": "gpt2-medium:2",
+   "unit": "N7a|copper|gpt2-medium",
+   "W": 3.5575264267493973,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7a",
+   "path_key": "gpt2-medium:3",
+   "unit": "N7a|copper|gpt2-medium",
+   "W": 8.0060820638209,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7a",
+   "path_key": "gpt2-medium:4",
+   "unit": "N7a|copper|gpt2-medium",
+   "W": 0.9234754678223831,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:0",
+   "unit": "N7a|copper|qwen2.5-0.5b-instruct",
+   "W": 0.25262828772968565,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:1",
+   "unit": "N7a|copper|qwen2.5-0.5b-instruct",
+   "W": 1.6969514489868482,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:2",
+   "unit": "N7a|copper|qwen2.5-0.5b-instruct",
+   "W": 0.36579516759424796,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:3",
+   "unit": "N7a|copper|qwen2.5-0.5b-instruct",
+   "W": 1.0218079034650085,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7a",
+   "path_key": "qwen2.5-0.5b-instruct:4",
+   "unit": "N7a|copper|qwen2.5-0.5b-instruct",
+   "W": 1.0431348564513963,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7b",
+   "path_key": "quantgan:0",
+   "unit": "N7b|copper|quantgan",
+   "W": 1.1679818382737386,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7b",
+   "path_key": "quantgan:1",
+   "unit": "N7b|copper|quantgan",
+   "W": 0.9799391489252799,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7b",
+   "path_key": "quantgan:2",
+   "unit": "N7b|copper|quantgan",
+   "W": 1.1687613977690334,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7b",
+   "path_key": "quantgan:3",
+   "unit": "N7b|copper|quantgan",
+   "W": 0.9775032356260815,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7c",
+   "path_key": "chronos-t5-base:0",
+   "unit": "N7c|copper|chronos-t5-base",
+   "W": 4.023263573473512,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7c",
+   "path_key": "chronos-t5-base:1",
+   "unit": "N7c|copper|chronos-t5-base",
+   "W": 3.788025139662318,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7c",
+   "path_key": "chronos-t5-base:2",
+   "unit": "N7c|copper|chronos-t5-base",
+   "W": 4.427919875291744,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7c",
+   "path_key": "chronos-t5-base:3",
+   "unit": "N7c|copper|chronos-t5-base",
+   "W": 2.5165318951836473,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N7c",
+   "path_key": "chronos-t5-base:4",
+   "unit": "N7c|copper|chronos-t5-base",
+   "W": 3.9421851721480587,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N8",
+   "path_key": "gjr_skewt:0",
+   "unit": "N8|copper|gjr_skewt",
+   "W": 0.9657444547103546,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N8",
+   "path_key": "gjr_skewt:1",
+   "unit": "N8|copper|gjr_skewt",
+   "W": 0.9966529993230426,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N8",
+   "path_key": "gjr_skewt:2",
+   "unit": "N8|copper|gjr_skewt",
+   "W": 1.2364701618125853,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N8",
+   "path_key": "gjr_skewt:3",
+   "unit": "N8|copper|gjr_skewt",
+   "W": 1.0604069568777776,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N8",
+   "path_key": "gjr_boot:0",
+   "unit": "N8|copper|gjr_boot",
+   "W": 1.1370290900216877,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N8",
+   "path_key": "gjr_boot:1",
+   "unit": "N8|copper|gjr_boot",
+   "W": 1.0762712356476198,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N8",
+   "path_key": "gjr_boot:2",
+   "unit": "N8|copper|gjr_boot",
+   "W": 1.1301180389372671,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N8",
+   "path_key": "gjr_boot:3",
+   "unit": "N8|copper|gjr_boot",
+   "W": 1.3886724934947443,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N8",
+   "path_key": "egarch_skewt:0",
+   "unit": "N8|copper|egarch_skewt",
+   "W": 1.09578295722922,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N8",
+   "path_key": "egarch_skewt:1",
+   "unit": "N8|copper|egarch_skewt",
+   "W": 1.0910286511276133,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N8",
+   "path_key": "egarch_skewt:2",
+   "unit": "N8|copper|egarch_skewt",
+   "W": 1.0941804319238846,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N8",
+   "path_key": "egarch_skewt:3",
+   "unit": "N8|copper|egarch_skewt",
+   "W": 1.0523802622518064,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N8",
+   "path_key": "egarch_boot:0",
+   "unit": "N8|copper|egarch_boot",
+   "W": 1.3212179028702202,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N8",
+   "path_key": "egarch_boot:1",
+   "unit": "N8|copper|egarch_boot",
+   "W": 1.0510977666643893,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N8",
+   "path_key": "egarch_boot:2",
+   "unit": "N8|copper|egarch_boot",
+   "W": 1.1710357257664978,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "family": "N8",
+   "path_key": "egarch_boot:3",
+   "unit": "N8|copper|egarch_boot",
+   "W": 0.9853419682620291,
+   "certified": false
+  }
+ ],
+ "real_windows": [
+  {
+   "asset": "equity",
+   "win_idx": 0,
+   "W": 13.209494549042319,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "win_idx": 1,
+   "W": 24.652854003614422,
+   "certified": true
+  },
+  {
+   "asset": "equity",
+   "win_idx": 2,
+   "W": 16.824764658038905,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "win_idx": 3,
+   "W": 3.249709789872704,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "win_idx": 4,
+   "W": 1.0874162663886382,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "win_idx": 5,
+   "W": 1.0580583768898206,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "win_idx": 6,
+   "W": 1.0679174103796292,
+   "certified": false
+  },
+  {
+   "asset": "equity",
+   "win_idx": 7,
+   "W": 1.0578763807181335,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "win_idx": 0,
+   "W": 1.008017691347476,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "win_idx": 1,
+   "W": 0.9911025361094702,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "win_idx": 2,
+   "W": 0.9874091656232467,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "win_idx": 3,
+   "W": 1.1559018576196058,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "win_idx": 4,
+   "W": 1.0285918825191311,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "win_idx": 5,
+   "W": 1.0132874875204625,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "win_idx": 6,
+   "W": 1.0884491828884884,
+   "certified": false
+  },
+  {
+   "asset": "bond",
+   "win_idx": 7,
+   "W": 1.1038103089847928,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "win_idx": 0,
+   "W": 4.663080594876685,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "win_idx": 1,
+   "W": 4.0119449117365145,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "win_idx": 2,
+   "W": 3.778838409085685,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "win_idx": 3,
+   "W": 3.419149472021757,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "win_idx": 4,
+   "W": 4.509035383267519,
+   "certified": false
+  },
+  {
+   "asset": "fx",
+   "win_idx": 5,
+   "W": 4.8024842697316545,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "win_idx": 0,
+   "W": 2.2793828064945294,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "win_idx": 1,
+   "W": 3.5416043803476,
+   "certified": false
+  },
+  {
+   "asset": "gold",
+   "win_idx": 2,
+   "W": 7.6339625911411435,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "win_idx": 0,
+   "W": 1.7990562116835807,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "win_idx": 1,
+   "W": 0.7719833473427768,
+   "certified": false
+  },
+  {
+   "asset": "copper",
+   "win_idx": 2,
+   "W": 2.62784665235992,
+   "certified": false
+  }
+ ]
+}

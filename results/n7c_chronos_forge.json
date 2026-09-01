@@ -1,0 +1,425 @@
+{
+  "protocol": {
+    "mechanism": "chunked sample continuation (Chronos-T5 probabilistic sampling, temperature 1.0)",
+    "model": "amazon/chronos-t5-base",
+    "forge_len": 1000,
+    "prefix_len": 100,
+    "chunk": 64,
+    "context_len": 512,
+    "temperature": 1.0,
+    "acceptance": "len>=1000 AND uniq_ratio>=0.3",
+    "retries_per_path": 3,
+    "per_path_target": 5,
+    "seed": 30303030,
+    "scale_align": "asset test-layer mean std"
+  },
+  "n_attempts": 45,
+  "n_series_saved": 18,
+  "log": [
+    {
+      "n_generated": 1000,
+      "uniq_ratio": 0.71,
+      "gen_s": 71.5,
+      "asset": "equity",
+      "model": "chronos-t5-base",
+      "gen_seed": 30380807,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1000,
+      "uniq_ratio": 0.447,
+      "gen_s": 194.3,
+      "asset": "equity",
+      "model": "chronos-t5-base",
+      "gen_seed": 30380907,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1000,
+      "uniq_ratio": 0.491,
+      "gen_s": 104.5,
+      "asset": "equity",
+      "model": "chronos-t5-base",
+      "gen_seed": 30381007,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1000,
+      "uniq_ratio": 0.639,
+      "gen_s": 206.2,
+      "asset": "equity",
+      "model": "chronos-t5-base",
+      "gen_seed": 30381107,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1000,
+      "uniq_ratio": 0.329,
+      "gen_s": 163.1,
+      "asset": "equity",
+      "model": "chronos-t5-base",
+      "gen_seed": 30381207,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.122,
+      "gen_s": 180.4,
+      "asset": "bond",
+      "model": "chronos-t5-base",
+      "gen_seed": 30381807,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.051,
+      "gen_s": 145.6,
+      "asset": "bond",
+      "model": "chronos-t5-base",
+      "gen_seed": 30459584,
+      "attempt": 1
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.171,
+      "gen_s": 95.3,
+      "asset": "bond",
+      "model": "chronos-t5-base",
+      "gen_seed": 30537361,
+      "attempt": 2
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.057,
+      "gen_s": 129.4,
+      "asset": "bond",
+      "model": "chronos-t5-base",
+      "gen_seed": 30381907,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.148,
+      "gen_s": 106.4,
+      "asset": "bond",
+      "model": "chronos-t5-base",
+      "gen_seed": 30459684,
+      "attempt": 1
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.186,
+      "gen_s": 182.4,
+      "asset": "bond",
+      "model": "chronos-t5-base",
+      "gen_seed": 30537461,
+      "attempt": 2
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.069,
+      "gen_s": 225.3,
+      "asset": "bond",
+      "model": "chronos-t5-base",
+      "gen_seed": 30382007,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.298,
+      "gen_s": 177.8,
+      "asset": "bond",
+      "model": "chronos-t5-base",
+      "gen_seed": 30459784,
+      "attempt": 1
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.217,
+      "gen_s": 238.9,
+      "asset": "bond",
+      "model": "chronos-t5-base",
+      "gen_seed": 30537561,
+      "attempt": 2
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.297,
+      "gen_s": 111.9,
+      "asset": "bond",
+      "model": "chronos-t5-base",
+      "gen_seed": 30382107,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1000,
+      "uniq_ratio": 0.486,
+      "gen_s": 114.5,
+      "asset": "bond",
+      "model": "chronos-t5-base",
+      "gen_seed": 30459884,
+      "attempt": 1
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.255,
+      "gen_s": 146.6,
+      "asset": "bond",
+      "model": "chronos-t5-base",
+      "gen_seed": 30382207,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1000,
+      "uniq_ratio": 0.396,
+      "gen_s": 60.1,
+      "asset": "bond",
+      "model": "chronos-t5-base",
+      "gen_seed": 30459984,
+      "attempt": 1
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.007,
+      "gen_s": 61.5,
+      "asset": "fx",
+      "model": "chronos-t5-base",
+      "gen_seed": 30382807,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.133,
+      "gen_s": 60.2,
+      "asset": "fx",
+      "model": "chronos-t5-base",
+      "gen_seed": 30460584,
+      "attempt": 1
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.022,
+      "gen_s": 79.9,
+      "asset": "fx",
+      "model": "chronos-t5-base",
+      "gen_seed": 30538361,
+      "attempt": 2
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.11,
+      "gen_s": 127.6,
+      "asset": "fx",
+      "model": "chronos-t5-base",
+      "gen_seed": 30382907,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.134,
+      "gen_s": 98.1,
+      "asset": "fx",
+      "model": "chronos-t5-base",
+      "gen_seed": 30460684,
+      "attempt": 1
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.046,
+      "gen_s": 120.9,
+      "asset": "fx",
+      "model": "chronos-t5-base",
+      "gen_seed": 30538461,
+      "attempt": 2
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.04,
+      "gen_s": 141.9,
+      "asset": "fx",
+      "model": "chronos-t5-base",
+      "gen_seed": 30383007,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.018,
+      "gen_s": 61.1,
+      "asset": "fx",
+      "model": "chronos-t5-base",
+      "gen_seed": 30460784,
+      "attempt": 1
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.006,
+      "gen_s": 61.1,
+      "asset": "fx",
+      "model": "chronos-t5-base",
+      "gen_seed": 30538561,
+      "attempt": 2
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.148,
+      "gen_s": 100.3,
+      "asset": "fx",
+      "model": "chronos-t5-base",
+      "gen_seed": 30383107,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.155,
+      "gen_s": 120.7,
+      "asset": "fx",
+      "model": "chronos-t5-base",
+      "gen_seed": 30460884,
+      "attempt": 1
+    },
+    {
+      "n_generated": 1000,
+      "uniq_ratio": 0.313,
+      "gen_s": 96.7,
+      "asset": "fx",
+      "model": "chronos-t5-base",
+      "gen_seed": 30538661,
+      "attempt": 2
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.19,
+      "gen_s": 156.1,
+      "asset": "fx",
+      "model": "chronos-t5-base",
+      "gen_seed": 30383207,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.141,
+      "gen_s": 85.5,
+      "asset": "fx",
+      "model": "chronos-t5-base",
+      "gen_seed": 30460984,
+      "attempt": 1
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.228,
+      "gen_s": 126.6,
+      "asset": "fx",
+      "model": "chronos-t5-base",
+      "gen_seed": 30538761,
+      "attempt": 2
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.191,
+      "gen_s": 103.4,
+      "asset": "gold",
+      "model": "chronos-t5-base",
+      "gen_seed": 30383807,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1000,
+      "uniq_ratio": 0.51,
+      "gen_s": 134.0,
+      "asset": "gold",
+      "model": "chronos-t5-base",
+      "gen_seed": 30461584,
+      "attempt": 1
+    },
+    {
+      "n_generated": 1000,
+      "uniq_ratio": 0.308,
+      "gen_s": 110.5,
+      "asset": "gold",
+      "model": "chronos-t5-base",
+      "gen_seed": 30383907,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1024,
+      "uniq_ratio": 0.291,
+      "gen_s": 119.7,
+      "asset": "gold",
+      "model": "chronos-t5-base",
+      "gen_seed": 30384007,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1000,
+      "uniq_ratio": 0.423,
+      "gen_s": 102.3,
+      "asset": "gold",
+      "model": "chronos-t5-base",
+      "gen_seed": 30461784,
+      "attempt": 1
+    },
+    {
+      "n_generated": 1000,
+      "uniq_ratio": 0.32,
+      "gen_s": 118.8,
+      "asset": "gold",
+      "model": "chronos-t5-base",
+      "gen_seed": 30384107,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1000,
+      "uniq_ratio": 0.412,
+      "gen_s": 118.7,
+      "asset": "gold",
+      "model": "chronos-t5-base",
+      "gen_seed": 30384207,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1000,
+      "uniq_ratio": 0.396,
+      "gen_s": 52.8,
+      "asset": "copper",
+      "model": "chronos-t5-base",
+      "gen_seed": 30384807,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1000,
+      "uniq_ratio": 0.356,
+      "gen_s": 114.4,
+      "asset": "copper",
+      "model": "chronos-t5-base",
+      "gen_seed": 30384907,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1000,
+      "uniq_ratio": 0.426,
+      "gen_s": 106.1,
+      "asset": "copper",
+      "model": "chronos-t5-base",
+      "gen_seed": 30385007,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1000,
+      "uniq_ratio": 0.506,
+      "gen_s": 106.9,
+      "asset": "copper",
+      "model": "chronos-t5-base",
+      "gen_seed": 30385107,
+      "attempt": 0
+    },
+    {
+      "n_generated": 1000,
+      "uniq_ratio": 0.43,
+      "gen_s": 128.8,
+      "asset": "copper",
+      "model": "chronos-t5-base",
+      "gen_seed": 30385207,
+      "attempt": 0
+    }
+  ]
+}

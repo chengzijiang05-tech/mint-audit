@@ -1,0 +1,592 @@
+{
+  "smoke": false,
+  "elapsed_s": 1390.8,
+  "window": 1000,
+  "step": 50,
+  "split_spec": {
+    "equity": {
+      "n_anchor": 15,
+      "cal": [
+        34,
+        43
+      ],
+      "test": [
+        63,
+        99
+      ],
+      "cap": 8
+    },
+    "bond": {
+      "n_anchor": 15,
+      "cal": [
+        34,
+        43
+      ],
+      "test": [
+        63,
+        94
+      ],
+      "cap": 8
+    },
+    "fx": {
+      "n_anchor": 11,
+      "cal": [
+        31,
+        36
+      ],
+      "test": [
+        37,
+        42
+      ],
+      "cap": 6
+    },
+    "gold": {
+      "n_anchor": 11,
+      "cal": [
+        31,
+        33
+      ],
+      "test": [
+        34,
+        36
+      ],
+      "cap": 3
+    },
+    "copper": {
+      "n_anchor": 11,
+      "cal": [
+        31,
+        33
+      ],
+      "test": [
+        34,
+        36
+      ],
+      "cap": 3
+    }
+  },
+  "tier1_assets": [
+    "equity",
+    "bond"
+  ],
+  "real_asset_sources": {
+    "equity": {
+      "n_points": 5965
+    },
+    "bond": {
+      "n_points": 5728
+    },
+    "fx": {
+      "n_points": 3132
+    },
+    "gold": {
+      "n_points": 2819
+    },
+    "copper": {
+      "n_points": 2818
+    }
+  },
+  "r1a_separability_real": {
+    "n_pos": 113,
+    "n_neg": 678,
+    "pos_per_asset": {
+      "equity": 47,
+      "bond": 42,
+      "fx": 12,
+      "gold": 6,
+      "copper": 6
+    },
+    "auc_logistic": 0.8773918425516891,
+    "auc_logistic_std": 0.019222827258231,
+    "auc_lda": 0.9366131046182197,
+    "auc_lda_std": 0.017513897687667843,
+    "single_feature_auc": {
+      "H_DFA": 0.521472525769201,
+      "H_RS": 0.46659730295280166,
+      "H_qneg3": 0.51153295529894,
+      "H_qpos3": 0.5498982148854271,
+      "dH": 0.6548952440001032,
+      "dalpha": 0.6814273597010171,
+      "beta_tail": 0.8281356725826037,
+      "garch_pers": 0.6139456371042049
+    },
+    "milestone_pass": true
+  },
+  "r1b_detection_real": {
+    "8d": {
+      "per_asset": {
+        "equity": {
+          "n_anchor": 15,
+          "n_cal": 10,
+          "n_clean": 8,
+          "n_forged": 40,
+          "threshold_cal": 8.110372223208147,
+          "threshold_loo": 6.027783605850329,
+          "cal_score_median": 6.633759854281847,
+          "loo_dist_q50": 3.737436592044124,
+          "p_min_floor": 0.0625,
+          "raw_verdict_achievable": false,
+          "raw_verdict": {
+            "fp_rate": 0.0,
+            "recall": 0.0,
+            "inconclusive_rate": 0.0
+          },
+          "recal": {
+            "fp": 4,
+            "fp_n": 8,
+            "fp_rate": 0.5,
+            "fp_wilson": [
+              0.21521252682444186,
+              0.7847874731755582
+            ],
+            "recall": 0.925,
+            "recall_wilson": [
+              0.8013546984090248,
+              0.9741644432281419
+            ],
+            "per_family_recall": {
+              "N1数值置换": 0.875,
+              "N2时间倒置": 0.875,
+              "N3标度破坏": 1.0,
+              "N4跨域嫁接": 1.0,
+              "N5相位伪造": 0.875
+            },
+            "struct_recall": 1.0,
+            "fp_rate_loo_threshold": 1.0
+          },
+          "auc": 0.6343749999999999
+        },
+        "bond": {
+          "n_anchor": 15,
+          "n_cal": 10,
+          "n_clean": 8,
+          "n_forged": 40,
+          "threshold_cal": 40.401729521121496,
+          "threshold_loo": 6.421866356152346,
+          "cal_score_median": 30.764371633348816,
+          "loo_dist_q50": 3.9947091551494767,
+          "p_min_floor": 0.0625,
+          "raw_verdict_achievable": false,
+          "raw_verdict": {
+            "fp_rate": 0.0,
+            "recall": 0.0,
+            "inconclusive_rate": 0.0
+          },
+          "recal": {
+            "fp": 1,
+            "fp_n": 8,
+            "fp_rate": 0.125,
+            "fp_wilson": [
+              0.02241690886329617,
+              0.4708948057698615
+            ],
+            "recall": 0.375,
+            "recall_wilson": [
+              0.2422277353579172,
+              0.529678399454681
+            ],
+            "per_family_recall": {
+              "N1数值置换": 0.0,
+              "N2时间倒置": 0.0,
+              "N3标度破坏": 0.875,
+              "N4跨域嫁接": 1.0,
+              "N5相位伪造": 0.0
+            },
+            "struct_recall": 0.9375,
+            "fp_rate_loo_threshold": 0.75
+          },
+          "auc": 0.440625
+        },
+        "fx": {
+          "n_anchor": 11,
+          "n_cal": 6,
+          "n_clean": 6,
+          "n_forged": 30,
+          "threshold_cal": 15.40610615306274,
+          "threshold_loo": 13.668802711426132,
+          "cal_score_median": 11.950662649562272,
+          "loo_dist_q50": 5.4517312961419515,
+          "p_min_floor": 0.08333333333333333,
+          "raw_verdict_achievable": false,
+          "raw_verdict": {
+            "fp_rate": 0.0,
+            "recall": 0.0,
+            "inconclusive_rate": 0.0
+          },
+          "recal": {
+            "fp": 3,
+            "fp_n": 6,
+            "fp_rate": 0.5,
+            "fp_wilson": [
+              0.18761280689940868,
+              0.8123871931005913
+            ],
+            "recall": 0.9,
+            "recall_wilson": [
+              0.7437855868473339,
+              0.9654007400402839
+            ],
+            "per_family_recall": {
+              "N1数值置换": 1.0,
+              "N2时间倒置": 0.8333333333333334,
+              "N3标度破坏": 1.0,
+              "N4跨域嫁接": 1.0,
+              "N5相位伪造": 0.6666666666666666
+            },
+            "struct_recall": 1.0,
+            "fp_rate_loo_threshold": 0.5
+          },
+          "auc": 0.8388888888888889
+        },
+        "gold": {
+          "n_anchor": 11,
+          "n_cal": 3,
+          "n_clean": 3,
+          "n_forged": 15,
+          "threshold_cal": 11.875745723376511,
+          "threshold_loo": 8.285709263276859,
+          "cal_score_median": 5.346687762237449,
+          "loo_dist_q50": 4.700595874842584,
+          "p_min_floor": 0.08333333333333333,
+          "raw_verdict_achievable": false,
+          "raw_verdict": {
+            "fp_rate": 0.0,
+            "recall": 0.0,
+            "inconclusive_rate": 0.0
+          },
+          "recal": {
+            "fp": 1,
+            "fp_n": 3,
+            "fp_rate": 0.3333333333333333,
+            "fp_wilson": [
+              0.0614903152761605,
+              0.7923450448735121
+            ],
+            "recall": 0.8666666666666667,
+            "recall_wilson": [
+              0.6211750079348376,
+              0.9626395301086407
+            ],
+            "per_family_recall": {
+              "N1数值置换": 0.3333333333333333,
+              "N2时间倒置": 1.0,
+              "N3标度破坏": 1.0,
+              "N4跨域嫁接": 1.0,
+              "N5相位伪造": 1.0
+            },
+            "struct_recall": 1.0,
+            "fp_rate_loo_threshold": 0.3333333333333333
+          },
+          "auc": 0.8
+        },
+        "copper": {
+          "n_anchor": 11,
+          "n_cal": 3,
+          "n_clean": 3,
+          "n_forged": 15,
+          "threshold_cal": 21.252547792993777,
+          "threshold_loo": 9.056898429340155,
+          "cal_score_median": 12.536202085413638,
+          "loo_dist_q50": 5.093329866007948,
+          "p_min_floor": 0.08333333333333333,
+          "raw_verdict_achievable": false,
+          "raw_verdict": {
+            "fp_rate": 0.0,
+            "recall": 0.0,
+            "inconclusive_rate": 0.0
+          },
+          "recal": {
+            "fp": 1,
+            "fp_n": 3,
+            "fp_rate": 0.3333333333333333,
+            "fp_wilson": [
+              0.0614903152761605,
+              0.7923450448735121
+            ],
+            "recall": 0.4,
+            "recall_wilson": [
+              0.19824228082594664,
+              0.642535572434923
+            ],
+            "per_family_recall": {
+              "N1数值置换": 0.0,
+              "N2时间倒置": 0.0,
+              "N3标度破坏": 1.0,
+              "N4跨域嫁接": 1.0,
+              "N5相位伪造": 0.0
+            },
+            "struct_recall": 1.0,
+            "fp_rate_loo_threshold": 1.0
+          },
+          "auc": 0.6222222222222222
+        }
+      },
+      "macro_auc": 0.6672222222222222,
+      "macro_recall": 0.6933333333333334,
+      "macro_fp_rate": 0.3583333333333333,
+      "macro_struct_recall": 0.9875,
+      "macro_raw_recall": 0.0,
+      "tier1_fp_rate": 0.3125,
+      "tier1_fp": "5/16",
+      "n5_recall_macro": 0.5083333333333333,
+      "raw_verdict_achievable_all": false
+    },
+    "15d": {
+      "per_asset": {
+        "equity": {
+          "n_anchor": 15,
+          "n_cal": 10,
+          "n_clean": 8,
+          "n_forged": 40,
+          "threshold_cal": 35.601224680758534,
+          "threshold_loo": 41.336546824467106,
+          "cal_score_median": 29.98254302002537,
+          "loo_dist_q50": 20.88178314470634,
+          "p_min_floor": 0.0625,
+          "raw_verdict_achievable": false,
+          "raw_verdict": {
+            "fp_rate": 0.0,
+            "recall": 0.0,
+            "inconclusive_rate": 0.0
+          },
+          "recal": {
+            "fp": 8,
+            "fp_n": 8,
+            "fp_rate": 1.0,
+            "fp_wilson": [
+              0.6755843804891231,
+              1.0
+            ],
+            "recall": 0.65,
+            "recall_wilson": [
+              0.4950559699353738,
+              0.7786566682895086
+            ],
+            "per_family_recall": {
+              "N1数值置换": 0.25,
+              "N2时间倒置": 0.375,
+              "N3标度破坏": 1.0,
+              "N4跨域嫁接": 1.0,
+              "N5相位伪造": 0.625
+            },
+            "struct_recall": 1.0,
+            "fp_rate_loo_threshold": 0.875
+          },
+          "auc": 0.36562500000000003
+        },
+        "bond": {
+          "n_anchor": 15,
+          "n_cal": 10,
+          "n_clean": 8,
+          "n_forged": 40,
+          "threshold_cal": 127.17529354025797,
+          "threshold_loo": 40.61642624079817,
+          "cal_score_median": 101.49838358851738,
+          "loo_dist_q50": 14.033321884218504,
+          "p_min_floor": 0.0625,
+          "raw_verdict_achievable": false,
+          "raw_verdict": {
+            "fp_rate": 0.0,
+            "recall": 0.0,
+            "inconclusive_rate": 0.0
+          },
+          "recal": {
+            "fp": 7,
+            "fp_n": 8,
+            "fp_rate": 0.875,
+            "fp_wilson": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "recall": 0.45,
+            "recall_wilson": [
+              0.30705075280944694,
+              0.6017117011155924
+            ],
+            "per_family_recall": {
+              "N1数值置换": 0.125,
+              "N2时间倒置": 0.125,
+              "N3标度破坏": 0.875,
+              "N4跨域嫁接": 1.0,
+              "N5相位伪造": 0.125
+            },
+            "struct_recall": 0.9375,
+            "fp_rate_loo_threshold": 1.0
+          },
+          "auc": 0.2
+        },
+        "fx": {
+          "n_anchor": 11,
+          "n_cal": 6,
+          "n_clean": 6,
+          "n_forged": 30,
+          "threshold_cal": 275.5327978817959,
+          "threshold_loo": 86.91685739466223,
+          "cal_score_median": 157.60012383298562,
+          "loo_dist_q50": 71.65159669662243,
+          "p_min_floor": 0.08333333333333333,
+          "raw_verdict_achievable": false,
+          "raw_verdict": {
+            "fp_rate": 0.0,
+            "recall": 0.0,
+            "inconclusive_rate": 0.0
+          },
+          "recal": {
+            "fp": 0,
+            "fp_n": 6,
+            "fp_rate": 0.0,
+            "fp_wilson": [
+              0.0,
+              0.3903430336530645
+            ],
+            "recall": 0.36666666666666664,
+            "recall_wilson": [
+              0.21873702204017678,
+              0.5448675356639506
+            ],
+            "per_family_recall": {
+              "N1数值置换": 0.5,
+              "N2时间倒置": 0.0,
+              "N3标度破坏": 0.5,
+              "N4跨域嫁接": 0.6666666666666666,
+              "N5相位伪造": 0.16666666666666666
+            },
+            "struct_recall": 0.5833333333333334,
+            "fp_rate_loo_threshold": 1.0
+          },
+          "auc": 0.7388888888888889
+        },
+        "gold": {
+          "n_anchor": 11,
+          "n_cal": 3,
+          "n_clean": 3,
+          "n_forged": 15,
+          "threshold_cal": 56.236487511277474,
+          "threshold_loo": 38.37546843733478,
+          "cal_score_median": 33.90066256046133,
+          "loo_dist_q50": 21.02429005086508,
+          "p_min_floor": 0.08333333333333333,
+          "raw_verdict_achievable": false,
+          "raw_verdict": {
+            "fp_rate": 0.0,
+            "recall": 0.0,
+            "inconclusive_rate": 0.0
+          },
+          "recal": {
+            "fp": 1,
+            "fp_n": 3,
+            "fp_rate": 0.3333333333333333,
+            "fp_wilson": [
+              0.0614903152761605,
+              0.7923450448735121
+            ],
+            "recall": 0.8666666666666667,
+            "recall_wilson": [
+              0.6211750079348376,
+              0.9626395301086407
+            ],
+            "per_family_recall": {
+              "N1数值置换": 0.3333333333333333,
+              "N2时间倒置": 1.0,
+              "N3标度破坏": 1.0,
+              "N4跨域嫁接": 1.0,
+              "N5相位伪造": 1.0
+            },
+            "struct_recall": 1.0,
+            "fp_rate_loo_threshold": 0.3333333333333333
+          },
+          "auc": 0.8222222222222223
+        },
+        "copper": {
+          "n_anchor": 11,
+          "n_cal": 3,
+          "n_clean": 3,
+          "n_forged": 15,
+          "threshold_cal": 132.13325878374448,
+          "threshold_loo": 75.39721397380222,
+          "cal_score_median": 122.32735451316051,
+          "loo_dist_q50": 57.71510867113404,
+          "p_min_floor": 0.08333333333333333,
+          "raw_verdict_achievable": false,
+          "raw_verdict": {
+            "fp_rate": 0.0,
+            "recall": 0.0,
+            "inconclusive_rate": 0.0
+          },
+          "recal": {
+            "fp": 0,
+            "fp_n": 3,
+            "fp_rate": 0.0,
+            "fp_wilson": [
+              0.0,
+              0.5615060804490177
+            ],
+            "recall": 0.4,
+            "recall_wilson": [
+              0.19824228082594664,
+              0.642535572434923
+            ],
+            "per_family_recall": {
+              "N1数值置换": 0.0,
+              "N2时间倒置": 0.0,
+              "N3标度破坏": 1.0,
+              "N4跨域嫁接": 1.0,
+              "N5相位伪造": 0.0
+            },
+            "struct_recall": 1.0,
+            "fp_rate_loo_threshold": 0.6666666666666666
+          },
+          "auc": 0.6
+        }
+      },
+      "macro_auc": 0.5453472222222222,
+      "macro_recall": 0.5466666666666666,
+      "macro_fp_rate": 0.4416666666666667,
+      "macro_struct_recall": 0.9041666666666668,
+      "macro_raw_recall": 0.0,
+      "tier1_fp_rate": 0.9375,
+      "tier1_fp": "15/16",
+      "n5_recall_macro": 0.3833333333333333,
+      "raw_verdict_achievable_all": false
+    }
+  },
+  "r1c_threshold_recalibration": {
+    "h_matched": 0.5415331377064868,
+    "std_matched": 0.015976517912110105,
+    "n_anchor": 15,
+    "n_cal": 10,
+    "n_clean_test": 8,
+    "real": {
+      "threshold_cal": 8.110372223208147,
+      "threshold_loo": 6.027783605850329,
+      "loo_dist_q50": 3.737436592044124,
+      "clean_d_median": 9.907093861775168,
+      "clean_d_q95": 12.07212171052766,
+      "n4_d_median": 98.12115801885872,
+      "n4_recall_at_cal": 1.0,
+      "n4_recall_at_loo": 1.0
+    },
+    "synth": {
+      "threshold_cal": 4.013318183380474,
+      "threshold_loo": 21.732174392535065,
+      "loo_dist_q50": 3.4712338267984175,
+      "clean_d_median": 3.4588869962395474,
+      "clean_d_q95": 5.8837822900547945,
+      "n4_d_median": 25.101534454055013,
+      "n4_recall_at_cal": 1.0,
+      "n4_recall_at_loo": 0.75
+    },
+    "miscalibration": {
+      "t_synth_on_real_fpr": 1.0,
+      "t_real": 8.110372223208147,
+      "t_synth": 4.013318183380474,
+      "threshold_shift_pct": -0.5051622696309539
+    }
+  },
+  "milestones": {
+    "m1_e1_real_auc": true,
+    "m2_e2_real_struct": false,
+    "m3_recalibration": true
+  },
+  "overall_pass": false
+}

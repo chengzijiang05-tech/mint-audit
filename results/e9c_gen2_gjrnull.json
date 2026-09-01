@@ -1,0 +1,830 @@
+{
+  "protocol": {
+    "null": "fitted GJR-GARCH(1,1) per window, residual-bootstrap innovations, B=99 simulated paths (model-based null; the surrogate program's other leg)",
+    "fitter": "same MLE as N8 (L-BFGS-B, 3 starts)",
+    "stats": [
+      "L",
+      "Ldir",
+      "CCK",
+      "bispec"
+    ],
+    "p_resolution": 0.01,
+    "seed": 20260821,
+    "reading": "p >= alpha -> judged forgery (same as E9)"
+  },
+  "summary": {
+    "L": {
+      "N1数值置换": {
+        "auc": 0.515,
+        "recall@p>=0.05": 0.893,
+        "fpr@p>=0.05": 0.929,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N2时间倒置": {
+        "auc": 0.526,
+        "recall@p>=0.05": 0.929,
+        "fpr@p>=0.05": 0.929,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N3标度破坏": {
+        "auc": 0.254,
+        "recall@p>=0.05": 0.464,
+        "fpr@p>=0.05": 0.929,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N4跨域嫁接": {
+        "auc": 0.177,
+        "recall@p>=0.05": 0.25,
+        "fpr@p>=0.05": 0.929,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N5相位伪造": {
+        "auc": 0.436,
+        "recall@p>=0.05": 0.821,
+        "fpr@p>=0.05": 0.929,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N7a": {
+        "auc": 0.411,
+        "recall@p>=0.05": 0.7,
+        "fpr@p>=0.05": 0.929,
+        "n_forge": 50,
+        "n_real": 28
+      },
+      "N7b": {
+        "auc": 0.457,
+        "recall@p>=0.05": 0.8,
+        "fpr@p>=0.05": 0.929,
+        "n_forge": 20,
+        "n_real": 28
+      },
+      "N7c": {
+        "auc": 0.169,
+        "recall@p>=0.05": 0.333,
+        "fpr@p>=0.05": 0.929,
+        "n_forge": 18,
+        "n_real": 28
+      },
+      "N8": {
+        "auc": 0.498,
+        "recall@p>=0.05": 0.912,
+        "fpr@p>=0.05": 0.929,
+        "n_forge": 80,
+        "n_real": 28
+      }
+    },
+    "Ldir": {
+      "N1数值置换": {
+        "auc": 0.482,
+        "recall@p>=0.05": 0.857,
+        "fpr@p>=0.05": 0.857,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N2时间倒置": {
+        "auc": 0.371,
+        "recall@p>=0.05": 0.821,
+        "fpr@p>=0.05": 0.857,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N3标度破坏": {
+        "auc": 0.156,
+        "recall@p>=0.05": 0.25,
+        "fpr@p>=0.05": 0.857,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N4跨域嫁接": {
+        "auc": 0.344,
+        "recall@p>=0.05": 0.75,
+        "fpr@p>=0.05": 0.857,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N5相位伪造": {
+        "auc": 0.349,
+        "recall@p>=0.05": 0.821,
+        "fpr@p>=0.05": 0.857,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N7a": {
+        "auc": 0.318,
+        "recall@p>=0.05": 0.68,
+        "fpr@p>=0.05": 0.857,
+        "n_forge": 50,
+        "n_real": 28
+      },
+      "N7b": {
+        "auc": 0.364,
+        "recall@p>=0.05": 0.7,
+        "fpr@p>=0.05": 0.857,
+        "n_forge": 20,
+        "n_real": 28
+      },
+      "N7c": {
+        "auc": 0.298,
+        "recall@p>=0.05": 0.444,
+        "fpr@p>=0.05": 0.857,
+        "n_forge": 18,
+        "n_real": 28
+      },
+      "N8": {
+        "auc": 0.479,
+        "recall@p>=0.05": 0.825,
+        "fpr@p>=0.05": 0.857,
+        "n_forge": 80,
+        "n_real": 28
+      }
+    },
+    "CCK": {
+      "N1数值置换": {
+        "auc": 0.524,
+        "recall@p>=0.05": 0.893,
+        "fpr@p>=0.05": 0.929,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N2时间倒置": {
+        "auc": 0.542,
+        "recall@p>=0.05": 0.857,
+        "fpr@p>=0.05": 0.929,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N3标度破坏": {
+        "auc": 0.236,
+        "recall@p>=0.05": 0.464,
+        "fpr@p>=0.05": 0.929,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N4跨域嫁接": {
+        "auc": 0.199,
+        "recall@p>=0.05": 0.214,
+        "fpr@p>=0.05": 0.929,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N5相位伪造": {
+        "auc": 0.462,
+        "recall@p>=0.05": 0.821,
+        "fpr@p>=0.05": 0.929,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N7a": {
+        "auc": 0.433,
+        "recall@p>=0.05": 0.72,
+        "fpr@p>=0.05": 0.929,
+        "n_forge": 50,
+        "n_real": 28
+      },
+      "N7b": {
+        "auc": 0.554,
+        "recall@p>=0.05": 0.85,
+        "fpr@p>=0.05": 0.929,
+        "n_forge": 20,
+        "n_real": 28
+      },
+      "N7c": {
+        "auc": 0.208,
+        "recall@p>=0.05": 0.333,
+        "fpr@p>=0.05": 0.929,
+        "n_forge": 18,
+        "n_real": 28
+      },
+      "N8": {
+        "auc": 0.551,
+        "recall@p>=0.05": 0.912,
+        "fpr@p>=0.05": 0.929,
+        "n_forge": 80,
+        "n_real": 28
+      }
+    },
+    "bispec": {
+      "N1数值置换": {
+        "auc": 0.487,
+        "recall@p>=0.05": 0.714,
+        "fpr@p>=0.05": 0.75,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N2时间倒置": {
+        "auc": 0.486,
+        "recall@p>=0.05": 0.714,
+        "fpr@p>=0.05": 0.75,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N3标度破坏": {
+        "auc": 0.147,
+        "recall@p>=0.05": 0.036,
+        "fpr@p>=0.05": 0.75,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N4跨域嫁接": {
+        "auc": 0.159,
+        "recall@p>=0.05": 0.071,
+        "fpr@p>=0.05": 0.75,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N5相位伪造": {
+        "auc": 0.656,
+        "recall@p>=0.05": 0.893,
+        "fpr@p>=0.05": 0.75,
+        "n_forge": 28,
+        "n_real": 28
+      },
+      "N7a": {
+        "auc": 0.381,
+        "recall@p>=0.05": 0.6,
+        "fpr@p>=0.05": 0.75,
+        "n_forge": 50,
+        "n_real": 28
+      },
+      "N7b": {
+        "auc": 0.264,
+        "recall@p>=0.05": 0.35,
+        "fpr@p>=0.05": 0.75,
+        "n_forge": 20,
+        "n_real": 28
+      },
+      "N7c": {
+        "auc": 0.127,
+        "recall@p>=0.05": 0.0,
+        "fpr@p>=0.05": 0.75,
+        "n_forge": 18,
+        "n_real": 28
+      },
+      "N8": {
+        "auc": 0.643,
+        "recall@p>=0.05": 0.925,
+        "fpr@p>=0.05": 0.75,
+        "n_forge": 80,
+        "n_real": 28
+      }
+    }
+  },
+  "params_sample": [
+    {
+      "asset": "equity",
+      "kind": "real",
+      "idx": 0,
+      "gjr_wagb": [
+        1e-05,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "real",
+      "idx": 1,
+      "gjr_wagb": [
+        0.0,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "real",
+      "idx": 2,
+      "gjr_wagb": [
+        1e-05,
+        0.08,
+        0.08,
+        0.82
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "real",
+      "idx": 3,
+      "gjr_wagb": [
+        1e-05,
+        0.08,
+        0.08,
+        0.82
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "real",
+      "idx": 4,
+      "gjr_wagb": [
+        1e-05,
+        0.08,
+        0.08,
+        0.82
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "real",
+      "idx": 5,
+      "gjr_wagb": [
+        1e-05,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "real",
+      "idx": 6,
+      "gjr_wagb": [
+        1e-05,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "real",
+      "idx": 7,
+      "gjr_wagb": [
+        1e-05,
+        0.08,
+        0.08,
+        0.82
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N1数值置换",
+      "idx": 0,
+      "gjr_wagb": [
+        1e-05,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N1数值置换",
+      "idx": 1,
+      "gjr_wagb": [
+        0.0,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N1数值置换",
+      "idx": 2,
+      "gjr_wagb": [
+        1e-05,
+        0.08,
+        0.08,
+        0.82
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N1数值置换",
+      "idx": 3,
+      "gjr_wagb": [
+        1e-05,
+        0.08,
+        0.08,
+        0.82
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N1数值置换",
+      "idx": 4,
+      "gjr_wagb": [
+        1e-05,
+        0.08,
+        0.08,
+        0.82
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N1数值置换",
+      "idx": 5,
+      "gjr_wagb": [
+        1e-05,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N1数值置换",
+      "idx": 6,
+      "gjr_wagb": [
+        1e-05,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N1数值置换",
+      "idx": 7,
+      "gjr_wagb": [
+        1e-05,
+        0.08,
+        0.08,
+        0.82
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N2时间倒置",
+      "idx": 0,
+      "gjr_wagb": [
+        1e-05,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N2时间倒置",
+      "idx": 1,
+      "gjr_wagb": [
+        0.0,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N2时间倒置",
+      "idx": 2,
+      "gjr_wagb": [
+        0.0,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N2时间倒置",
+      "idx": 3,
+      "gjr_wagb": [
+        1e-05,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N2时间倒置",
+      "idx": 4,
+      "gjr_wagb": [
+        1e-05,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N2时间倒置",
+      "idx": 5,
+      "gjr_wagb": [
+        1e-05,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N2时间倒置",
+      "idx": 6,
+      "gjr_wagb": [
+        2e-05,
+        0.07117,
+        0.07117,
+        0.72953
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N2时间倒置",
+      "idx": 7,
+      "gjr_wagb": [
+        2e-05,
+        0.15815,
+        0.0243,
+        0.68099
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N3标度破坏",
+      "idx": 0,
+      "gjr_wagb": [
+        1e-05,
+        0.08,
+        0.08,
+        0.82
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N3标度破坏",
+      "idx": 1,
+      "gjr_wagb": [
+        0.0,
+        0.08,
+        0.08,
+        0.82
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N3标度破坏",
+      "idx": 2,
+      "gjr_wagb": [
+        0.0,
+        0.08,
+        0.08,
+        0.82
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N3标度破坏",
+      "idx": 3,
+      "gjr_wagb": [
+        1e-05,
+        0.08,
+        0.08,
+        0.82
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N3标度破坏",
+      "idx": 4,
+      "gjr_wagb": [
+        0.0,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N3标度破坏",
+      "idx": 5,
+      "gjr_wagb": [
+        0.0,
+        0.08,
+        0.08,
+        0.82
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N3标度破坏",
+      "idx": 6,
+      "gjr_wagb": [
+        0.0,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N3标度破坏",
+      "idx": 7,
+      "gjr_wagb": [
+        0.0,
+        0.08,
+        0.08,
+        0.82
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N4跨域嫁接",
+      "idx": 0,
+      "gjr_wagb": [
+        1e-05,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N4跨域嫁接",
+      "idx": 1,
+      "gjr_wagb": [
+        0.0,
+        0.09873,
+        0.08,
+        0.81999
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N4跨域嫁接",
+      "idx": 2,
+      "gjr_wagb": [
+        0.0,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N4跨域嫁接",
+      "idx": 3,
+      "gjr_wagb": [
+        0.0,
+        0.099,
+        0.08,
+        0.81999
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N4跨域嫁接",
+      "idx": 4,
+      "gjr_wagb": [
+        0.0,
+        0.09768,
+        0.08049,
+        0.81999
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N4跨域嫁接",
+      "idx": 5,
+      "gjr_wagb": [
+        0.0,
+        0.08,
+        0.08,
+        0.82
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N4跨域嫁接",
+      "idx": 6,
+      "gjr_wagb": [
+        0.0,
+        0.0956,
+        0.08037,
+        0.82078
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N4跨域嫁接",
+      "idx": 7,
+      "gjr_wagb": [
+        0.0,
+        0.08,
+        0.08,
+        0.82
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N5相位伪造",
+      "idx": 0,
+      "gjr_wagb": [
+        3e-05,
+        0.03,
+        0.1,
+        0.85
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N5相位伪造",
+      "idx": 1,
+      "gjr_wagb": [
+        1e-05,
+        0.05,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N5相位伪造",
+      "idx": 2,
+      "gjr_wagb": [
+        2e-05,
+        0.03,
+        0.1,
+        0.85
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N5相位伪造",
+      "idx": 3,
+      "gjr_wagb": [
+        2e-05,
+        0.03,
+        0.1,
+        0.85
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N5相位伪造",
+      "idx": 4,
+      "gjr_wagb": [
+        2e-05,
+        0.03,
+        0.1,
+        0.85
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N5相位伪造",
+      "idx": 5,
+      "gjr_wagb": [
+        1e-05,
+        0.03,
+        0.1,
+        0.85
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N5相位伪造",
+      "idx": 6,
+      "gjr_wagb": [
+        1e-05,
+        0.03,
+        0.1,
+        0.85
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N5相位伪造",
+      "idx": 7,
+      "gjr_wagb": [
+        1e-05,
+        0.04682,
+        0.05619,
+        0.82409
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N7a",
+      "idx": 0,
+      "gjr_wagb": [
+        2e-05,
+        0.08,
+        0.08,
+        0.82
+      ]
+    },
+    {
+      "asset": "equity",
+      "kind": "N7a",
+      "idx": 1,
+      "gjr_wagb": [
+        1e-05,
+        0.05,
+        0.06,
+        0.88
+      ]
+    }
+  ],
+  "elapsed_s": 266.8
+}
