@@ -1,4 +1,4 @@
-"""Fig. 4 - Structural blindness of the classical fingerprint kit: the
+"""Fig. 3 - Structural blindness of the classical fingerprint kit: the
 collapse scatter. Real data: Mahalanobis distance of each of the 28 test
 windows vs its own time reversal (8-feature engine), frozen in figdata."""
 import os
@@ -67,4 +67,4 @@ for t in leg.get_texts():
     t.set_fontsize(5.8)
 
 fig.tight_layout(pad=0.4, rect=(0, 0, 1, 0.98))
-save_all(fig, "fig4_blindness")
+save_all(fig, "fig3_blindness")

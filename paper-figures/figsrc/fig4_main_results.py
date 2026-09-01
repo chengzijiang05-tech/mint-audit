@@ -1,4 +1,4 @@
-"""Fig. 5 - Main comparison heatmap + ablation dot matrix. All values from
+"""Fig. 4 - Main comparison heatmap + ablation dot matrix. All values from
 the frozen protocol (figdata.json + Table 2 of the manuscript)."""
 import os
 import sys
@@ -157,4 +157,4 @@ for ri, (label, a, brk) in enumerate(ARMS):
 fig.text(0.012, 0.965, "(a)", fontsize=7.6, fontweight="bold", color=INK)
 fig.text(0.545, 0.965, "(b)", fontsize=7.6, fontweight="bold", color=INK)
 
-save_all(fig, "fig5_main_results")
+save_all(fig, "fig4_main_results")

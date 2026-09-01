@@ -77,11 +77,12 @@ Forgery generators that require external models, among them N7a and N7c, load lo
 The eight paper figures regenerate from the frozen results:
 
 ```bash
-python paper-figures/figsrc/fig5_main_results.py
+python paper-figures/figsrc/fig4_main_results.py
+python paper-figures/figsrc/fig5_genaudit.py
 python paper-figures/scripts/fig2_evidence.py
 ```
 
-Each script reads its numbers from `paper-figures/scripts/figdata.json` and the hardcoded rows that mirror the frozen JSON, then writes PDF, PNG, and SVG into `paper-figures/figures/`. Fig. 1 is edited as `paper-figures/figsrc/fig1_framework.drawio` and exported with draw.io desktop, the remaining diagram figures (fig3) live in `paper-figures/figsrc/`, and the data-driven evidence figure in `paper-figures/scripts/`.
+Each script reads its numbers from `paper-figures/scripts/figdata.json` and the hardcoded rows that mirror the frozen JSON, then writes PDF, PNG, and SVG into `paper-figures/figures/`. The framework diagram (Fig. 1) is edited as `paper-figures/figsrc/fig1_framework.drawio` and exported with draw.io desktop; the data-driven evidence figure (Fig. 2) lives in `paper-figures/scripts/`; the remaining six figures (Figs. 3–8) regenerate from Python scripts in `paper-figures/figsrc/`.
 
 ## Integrity
 
