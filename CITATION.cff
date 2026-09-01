@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Shen
+    given-names: Dapeng
+    orcid: "https://orcid.org/0009-0009-7836-6225"
+title: "MINT: manufactured-null invariant testing for auditing machine-generated financial time series"
+version: 1.0.1
+date-released: "2026-09-01"
+repository-code: "https://github.com/chengzijiang05-tech/mint-audit"
+abstract: >-
+  Code, frozen experimental results, and figure-generation scripts for
+  the paper "Manufactured nulls: orbit-contrastive learning with
+  anytime-valid evidence for auditing machine-generated financial series".
+  The framework manufactures the null that a machine-generated sequence
+  must survive: five surrogate operators with published mechanisms turn
+  each reference window into an orbit of forged twins, a contrastive
+  encoder learns the separating statistic from real windows alone, and an
+  orbit-normalized e-value converts the score gap into evidence that is
+  exact by exchangeability and valid under any stopping rule.
+keywords:
+  - machine-generated time series
+  - financial forensics
+  - e-values
+  - anytime-valid inference
+  - contrastive learning
