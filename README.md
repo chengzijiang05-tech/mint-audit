@@ -1,5 +1,7 @@
 # MINT
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22230390.svg)](https://doi.org/10.5281/zenodo.22230390)
+
 Manufactured-null invariant testing for auditing machine-generated financial time series.
 
 This repository contains the code, frozen experimental results, and figure-generation scripts for the paper *Manufactured nulls: orbit-contrastive learning with anytime-valid evidence for auditing machine-generated financial series*.
